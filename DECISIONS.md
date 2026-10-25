@@ -78,6 +78,11 @@ One line each: decision, then why. These are calls made overnight when PLAN.md w
 - Design: ink-navy night background with amber/coral glow. Young Serif (display), Instrument Sans (body) and JetBrains Mono (chips/labels). Tokens are CSS variables with a light "warm paper" theme (system preference plus a toggle). Why: §10's "late-night campus" brief.
 - Agent A's bubbles are amber on the left and agent B's are coral on the right. Redactions render as a dashed red "hidden until a later level" span, and guard hits as solid red chips. Why: §10.4 asks that blocked items read at a glance.
 - The watch page works in two views. Without `?as=` it's a judge view showing both names and both verdicts. With `?as=<id>` (linked from a student's inbox), the other side is "Their agent" and their verdict panel says it stays private. Why: verdicts are private to each student (§1, §6.2).
+- The hub's "who can meet whom" view is a 10×10 matrix: ♥ matched, a vibe % for passed pairs, × for blocked with the reason in the tooltip. Below it are near-misses (blocked by something other than orientation) and one-way orientation examples. Why: §10.6 asks for "grid/graph" plus block reasons, and a matrix reads instantly for judges and fits at 375px.
+- The hub API exposes filters (gender, who they want to meet, age range, intent) because it's the hub's own god view for judges. It never exposes schedules, budgets, contact info or hub-log originals. Why: §10.6, and data minimization.
+- The landing page's `.edu` gate is a client-side regex (`@….edu`) that forwards to `/onboard?email=…`, and the API re-validates on save. Why: §10.1 says to describe .edu SSO as "coming soon".
+- The persona switcher lives in the header on every page (plus a grid on the landing page). It stores the choice in localStorage (try/catch), and `?as=` in a URL wins. Why: demo flow "YES as two personas".
+- Added `GET /api/hub` and `GET /api/students` (not in §11). Why: the hub view and the persona switcher need them, and neither exposes private fields.
 - Added `scripts/screenshots.ts` (`npm run shots`) driving the locally installed Edge/Chrome through `playwright-core` (no browser download). It flags horizontal overflow and console errors at 375px and 1280px. Why: this is how the §12 mobile check was verified overnight.
 
 ## Places

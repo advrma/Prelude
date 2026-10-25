@@ -11,7 +11,7 @@ Updated at every milestone commit.
 - [x] 7. Watch the date screen
 - [x] 8. Reveal state machine + matches inbox + tests
 - [x] 9. Negotiator + date planner + .ics + tests
-- [ ] 10. Landing + hub view + persona switcher + usage badge
+- [x] 10. Landing + hub view + persona switcher + usage badge
 - [ ] 11. Onboarding chat
 - [ ] 12. Scripts: `check`, `night`, mock replay cache
 - [ ] 13. Polish: design, mobile, empty/error/loading states, README with Mermaid diagram
