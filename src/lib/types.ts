@@ -133,6 +133,8 @@ export interface Match {
   stage: Level;
   yes: Record<string, Level | null>;
   closed: boolean;
+  /** + Who said no / unmatched. The match disappears only for them; the other side just never sees progress. */
+  closedBy?: string[];
   datePlan?: DatePlan;
   /** + Stage-2 "say hi" chat between the two students. */
   chat?: ChatLine[];

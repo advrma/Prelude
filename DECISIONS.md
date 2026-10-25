@@ -57,6 +57,14 @@ One line each: decision, then why. These are calls made overnight when PLAN.md w
 - With `?as=<studentId>`, the pre-date API and stream return only that student's verdict and show the other side as "Their agent". Without it, they return the judge/hub view with both verdicts. Why: verdicts are private (§1), and the demo still needs a god view for judges.
 - Process-wide singletons (store, limiter, router, run registry, event bus) live on `globalThis`. Why: Next dev bundles each route separately and hot-reloads modules, and they must share one state.
 
+## Reveal
+- `sayYes(match, student, level)` takes the level being unlocked, which must be `stage + 1`. Stage advances when both `yes` values are at least that level. Why: makes "YES at the current level" unambiguous and blocks skipping.
+- A NO (or unmatch/report) closes the match only for the student who said it (`closedBy`). The other student keeps seeing an unchanged "waiting for their yes", byte-for-byte the same as "hasn't answered yet". Why: if the match vanished for both, its disappearance would itself be a visible rejection (§1 "Fail quietly", §7.4).
+- "Not now" closes permanently (with a confirm dialog explaining it's quiet). Why: §7.4 says `sayNo` closes the match. There's no snooze state in the plan.
+- Report logs `{matchId, by, reason}` to `store.reports` and also closes the match for the reporter. Why: someone reporting shouldn't have to keep seeing the match.
+- At stage 0 the inbox card shows only the student's own verdict, shared tags and the other's pronouns (already used by the agents at level 0). Major, year and photos come at 1, first name and chat at 2, the date plan at 3. Contact, filters, schedules and budgets are never sent. Enforced in `viewMatch` and covered by tests on the real route handlers.
+- The stage-2 chat is a short human say-hi chat: 280 characters per line and 40 lines per match. Why: §7.4 "short in-app say hi chat".
+
 ## UI
 - Design: ink-navy night background with amber/coral glow. Young Serif (display), Instrument Sans (body) and JetBrains Mono (chips/labels). Tokens are CSS variables with a light "warm paper" theme (system preference plus a toggle). Why: §10's "late-night campus" brief.
 - Agent A's bubbles are amber on the left and agent B's are coral on the right. Redactions render as a dashed red "hidden until a later level" span, and guard hits as solid red chips. Why: §10.4 asks that blocked items read at a glance.

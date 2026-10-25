@@ -1,5 +1,6 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import { createContext, useCallback, useContext, useEffect, useState, type ReactNode } from "react";
 
 export interface PersonaSummary {
@@ -44,9 +45,21 @@ export function PersonaProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     refresh();
-    const fromUrl = new URLSearchParams(window.location.search).get("as");
-    setAsState(fromUrl || readStored() || "s01");
   }, [refresh]);
+
+  // The provider lives in the layout, so re-read ?as= on every client-side navigation.
+  const pathname = usePathname();
+  useEffect(() => {
+    const fromUrl = new URLSearchParams(window.location.search).get("as");
+    if (fromUrl) {
+      setAsState(fromUrl);
+      try {
+        window.localStorage.setItem(KEY, fromUrl);
+      } catch {
+        /* private mode */
+      }
+    } else setAsState((cur) => cur ?? (readStored() || "s01"));
+  }, [pathname]);
 
   const setAs = useCallback((id: string) => {
     setAsState(id);
