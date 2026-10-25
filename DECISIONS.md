@@ -26,4 +26,7 @@ One line each: decision, then why. These are calls made overnight when PLAN.md w
 - Persona emails use `@example.edu`. Why: a reserved example domain can't collide with real students' addresses.
 - Static seed data (`personas.json`, `places.json`) is imported as JSON, not read from disk. Why: it then ships inside the serverless bundle for replay deploys.
 - Avatars are generated abstract SVG silhouettes (`npm run avatars`) and committed under `public/avatars/`. Why: §9 says no real people or photos.
+- Matcher: "self-describe" and "prefer-not" students only meet people open to "everyone". Why: §7.1 needs the other's gender in `wantsToMeet`, and those values can't appear there by design.
+- Matcher: "flexible" chronotype and "balanced" social energy earn half credit against either extreme. Why: the plan says "match" without defining partial matches.
+- Matcher: dealbreakers are checked in both directions, with a small synonym map (smoking → smok/vape/cigarette …). Everything else is a literal substring match on the other's vibe text. Why: §7.1 "simple keyword check".
 - Places carry a `foodOk` list, a `servesFood` flag, opening hours and optional `days`. Why: the negotiator must validate diet, budget and time in code (§7.5).
