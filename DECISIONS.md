@@ -29,4 +29,16 @@ One line each: decision, then why. These are calls made overnight when PLAN.md w
 - Matcher: "self-describe" and "prefer-not" students only meet people open to "everyone". Why: §7.1 needs the other's gender in `wantsToMeet`, and those values can't appear there by design.
 - Matcher: "flexible" chronotype and "balanced" social energy earn half credit against either extreme. Why: the plan says "match" without defining partial matches.
 - Matcher: dealbreakers are checked in both directions, with a small synonym map (smoking → smok/vape/cigarette …). Everything else is a literal substring match on the other's vibe text. Why: §7.1 "simple keyword check".
+## LLM layer
+- In live mode the cache is a fallback only (after all models fail), not a first read. `LLM_MODE=replay` reads it first. Why: §8.2/§8.4. Live runs should produce fresh transcripts.
+- Any provider error moves down the chain, not just 429/5xx/timeout. 404 "model not found" does too. Why: a wrong model ID in the morning shouldn't kill the demo. Errors are logged with a hint, and the result carries `attempts`.
+- If a model rejects `responseJsonSchema` (HTTP 400 mentioning the schema), the provider retries once with plain JSON mode. Zod still validates. Why: not every Gemini model supports full JSON Schema, and the exact IDs are unknown tonight.
+- JSON schemas for Gemini come from Zod via `z.toJSONSchema` with `$schema` stripped. Why: one source of truth for the shape.
+- Mock-only context (`req.mock`) carries what the mock needs (vibe, matcher score, own logistics) and is excluded from the cache key. Real providers never see it. Why: §8.5 wants verdict scores derived from the matcher score, and a real LLM gets the same facts through its prompt instead.
+- The mock "misbehaves" on purpose. In roughly 2 of 3 pre-dates one agent slips identifying info (course code, @handle or dorm) on turn 4. In roughly 3 of 5, an agent attempts a prompt injection on turn 5. Why: §10.4 needs visible blocked-leak chips in mock mode, and the guards need real work to show.
+- The limiter's RPM window is a sliding 60-second window per model with a FIFO queue. Daily counts persist in `usage.json` and are keyed by the Los Angeles calendar day. Why: §8.3.
+- Mock negotiator: proposes from its own free windows in preference order and ranks places by `dateVibe` tag overlap (cheaper on ties). It accepts when the slot fits its own constraints. Otherwise it counters, explaining the busy label or budget out loud, and leaves 30 minutes after a busy block ends. Why: mirrors what §6.3 asks of the real agents.
+- Tuned three personas' `dateVibe` (Priya → brunch, Elena → open mic, Kai → observatory). Why: so the designed budget clash actually happens and the other negotiations pick characterful spots.
+
+## Places
 - Places carry a `foodOk` list, a `servesFood` flag, opening hours and optional `days`. Why: the negotiator must validate diet, budget and time in code (§7.5).

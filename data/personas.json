@@ -135,7 +135,7 @@
       ],
       "budgetBand": "under_50",
       "food": ["no seafood"],
-      "dateVibe": ["brunch", "active", "outdoors"]
+      "dateVibe": ["brunch", "early", "outdoors"]
     }
   },
   {
@@ -225,7 +225,7 @@
       ],
       "budgetBand": "under_15",
       "food": ["vegan"],
-      "dateVibe": ["coffee", "open mic", "low-key"]
+      "dateVibe": ["open mic", "music", "low-key", "coffee"]
     }
   },
   {
@@ -358,7 +358,7 @@
       ],
       "budgetBand": "under_15",
       "food": ["gluten-free"],
-      "dateVibe": ["astronomy", "books", "low-key"]
+      "dateVibe": ["astronomy", "quiet", "low-key"]
     }
   },
   {

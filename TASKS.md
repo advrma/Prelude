@@ -5,7 +5,7 @@ Updated at every milestone commit.
 - [x] 1. Scaffold: Next.js + TS + Tailwind + Vitest + Zod, layout, `.env.example`, `.gitignore`, health route
 - [x] 2. Types + store + personas + places: `npm run seed`, `npm run reset`
 - [x] 3. Matcher + tests
-- [ ] 4. LLM layer: mock, cache, limiter, router, Gemini provider + tests
+- [x] 4. LLM layer: mock, cache, limiter, router, Gemini provider + tests
 - [ ] 5. Guards + tests
 - [ ] 6. Pre-date runner + verdicts + SSE route
 - [ ] 7. Watch the date screen
