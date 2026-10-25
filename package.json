@@ -20,7 +20,8 @@
     "night:mock": "tsx scripts/run-night.ts --mock",
     "check": "tsx scripts/check-models.ts",
     "avatars": "tsx scripts/gen-avatars.ts",
-    "shots": "tsx scripts/screenshots.ts"
+    "shots": "tsx scripts/screenshots.ts",
+    "e2e": "tsx scripts/demo-e2e.ts"
   },
   "dependencies": {
     "@google/genai": "^2.31.0",

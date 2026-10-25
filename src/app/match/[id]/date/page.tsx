@@ -18,6 +18,10 @@ function fmtTime(hhmm?: string) {
   return m ? `${h12}:${String(m).padStart(2, "0")}${suffix}` : `${h12}${suffix}`;
 }
 
+function cost(o: DateOption) {
+  return /^free$/i.test(o.estCostPerPerson) ? "Free" : `${o.estCostPerPerson} pp`;
+}
+
 function fmtDate(o: DateOption) {
   if (!o.date) return DAY[o.day] ?? o.day;
   const [y, mo, d] = o.date.split("-").map(Number);
@@ -163,7 +167,7 @@ export default function DatePlannerPage() {
   const allShown = !!plan && shown >= plan.negotiation.length;
   const final = plan?.final;
   const myAgent = `agent:${m.me.id}`;
-  const theirsDiffers = plan && plan.theirPick !== null && plan.myPick !== null && plan.theirPick !== plan.myPick && !final;
+  const theirsDiffers = plan && plan.theirPick !== null && plan.theirPick !== plan.myPick && !final;
 
   return (
     <div className="mx-auto max-w-4xl px-4 py-6 sm:py-10">
@@ -235,7 +239,7 @@ export default function DatePlannerPage() {
                     {fmtDate(final)} at {fmtTime(final.start)}
                   </p>
                   <p className="text-muted">
-                    {final.place} · {final.area} · {final.estCostPerPerson} pp
+                    {final.place} · {final.area} · {cost(final)}
                   </p>
                   <a className="btn btn-primary mt-5" href={`/api/match/${id}/ics?as=${m.me.id}`} download>
                     📅 Add to calendar (.ics)
@@ -253,7 +257,8 @@ export default function DatePlannerPage() {
                   {theirsDiffers && (
                     <div className="mb-4 flex flex-col gap-3 rounded-2xl border border-coral/50 bg-coral/10 p-4 sm:flex-row sm:items-center sm:justify-between">
                       <p className="text-sm">
-                        {name} picked <strong>option {plan.theirPick! + 1}</strong>. Happy with theirs?
+                        {name} picked <strong>option {plan.theirPick! + 1}</strong>
+                        {plan.myPick === null ? ". Pick the same one and it's booked." : ". Happy with theirs?"}
                       </p>
                       <button className="btn btn-primary btn-sm" onClick={() => pick(plan.theirPick!)} disabled={busy !== null}>
                         Accept their pick
@@ -277,7 +282,7 @@ export default function DatePlannerPage() {
                           <p className="text-lg text-amber">{fmtTime(o.start)}</p>
                           <p className="mt-2 font-semibold">{o.place}</p>
                           <p className="text-sm text-muted">
-                            {o.area} · {o.estCostPerPerson} pp
+                            {o.area} · {cost(o)}
                           </p>
                           <p className="mt-3 flex-1 text-sm text-muted">{o.why}</p>
                           <button className={cx("btn mt-4", mine ? "btn-ghost" : "btn-primary")} onClick={() => pick(i)} disabled={busy !== null || mine}>
