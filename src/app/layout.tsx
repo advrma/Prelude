@@ -4,7 +4,7 @@ import { Shell } from "@/components/Shell";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Prelude",
+  title: { default: "Prelude · your AI goes on the first date", template: "%s · Prelude" },
   description: "Your AI goes on the first date for you, reveals the match step by step, then books the real one.",
 };
 

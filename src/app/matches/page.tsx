@@ -36,6 +36,8 @@ function pronounWord(p: string) {
   return p.startsWith("she") ? "Her" : p.startsWith("he") ? "Him" : "Them";
 }
 
+const SHORT: Record<Level, string> = { 0: "Vibe", 1: "Photos", 2: "Name", 3: "Date" };
+
 function Progress({ stage }: { stage: Level }) {
   return (
     <ol className="grid grid-cols-4 gap-1.5" aria-label={`Reveal progress: level ${stage} of 3`}>
@@ -46,7 +48,8 @@ function Progress({ stage }: { stage: Level }) {
             <div className={cx("h-1.5 rounded-full", open ? "bg-gradient-to-r from-amber to-coral" : "bg-line")} />
             <p className={cx("mt-1.5 flex items-center gap-1 truncate text-[11px]", open ? "text-text" : "text-muted")}>
               <LockIcon open={open} className={cx("h-3 w-3 shrink-0", open ? "text-amber" : "")} />
-              <span className="truncate">{LEVEL_NAMES[l]}</span>
+              <span className="truncate sm:hidden">{SHORT[l]}</span>
+              <span className="hidden truncate sm:inline">{LEVEL_NAMES[l]}</span>
             </p>
           </li>
         );
@@ -127,7 +130,7 @@ function MatchCard({ m, as, onChange }: { m: MatchView; as: string; onChange: ()
         <div className="min-w-0 flex-1">
           <div className="flex items-start justify-between gap-2">
             <div className="min-w-0">
-              <h2 className="truncate font-display text-xl sm:text-2xl">{title}</h2>
+              <h2 className="line-clamp-2 font-display text-xl leading-tight sm:text-2xl">{title}</h2>
               <p className="text-sm text-muted">
                 {m.stage >= 1 ? `${m.other.major} · ${m.other.year}` : `${pronounWord(m.other.pronouns)}: details unlock with both your yeses`}
               </p>
@@ -174,7 +177,9 @@ function MatchCard({ m, as, onChange }: { m: MatchView; as: string; onChange: ()
 
         {v && (
           <div className="flex gap-3 rounded-2xl bg-surface-2/50 p-3">
-            <ScoreDial score={v.score} size={64} label="your agent's score" />
+            <div className="shrink-0">
+              <ScoreDial score={v.score} size={64} label="your agent's score" />
+            </div>
             <div className="min-w-0 text-sm">
               <p className="label">Your agent&apos;s private verdict</p>
               <p className="mt-1">{v.summaryForStudent}</p>

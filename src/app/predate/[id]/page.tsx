@@ -217,7 +217,8 @@ export default function WatchPage() {
   // Desktop: the transcript scrolls inside its card. Mobile: follow the conversation only while it streams.
   useEffect(() => {
     const list = listRef.current;
-    if (list && list.scrollHeight > list.clientHeight + 4) list.scrollTo({ top: list.scrollHeight, behavior: "smooth" });
+    if (list && list.scrollHeight > list.clientHeight + 4)
+      list.scrollTo({ top: list.scrollHeight, behavior: s.status === "done" ? "auto" : "smooth" });
     else if (s.status === "streaming" && s.messages.length > 1) endRef.current?.scrollIntoView({ behavior: "smooth", block: "nearest" });
   }, [s.messages.length, s.typing, s.status]);
 
