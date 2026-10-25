@@ -290,7 +290,7 @@ export function mockNegotiateTurn(ctx: Extract<MockContext, { kind: "negotiate" 
     const vibe = side.dateVibe.slice(0, 2).join(" and ");
     return {
       type: "propose",
-      content: `How about ${describe(best.day, best.start, best.place)}? ${P.S_Is} free then and loves ${vibe} plans. It's ${best.place.typicalCost.toLowerCase()} per person.`,
+      content: `How about ${describe(best.day, best.start, best.place)}? ${P.S_Is} free then and loves ${vibe} plans. ${/^free$/i.test(best.place.typicalCost) ? "Bonus: it's free." : `It's about ${best.place.typicalCost} per person.`}`,
       data: { day: best.day, start: best.start, place: best.place.name, budgetBand: side.budgetBand },
     };
   }

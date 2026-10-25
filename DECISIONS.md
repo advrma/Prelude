@@ -65,6 +65,15 @@ One line each: decision, then why. These are calls made overnight when PLAN.md w
 - At stage 0 the inbox card shows only the student's own verdict, shared tags and the other's pronouns (already used by the agents at level 0). Major, year and photos come at 1, first name and chat at 2, the date plan at 3. Contact, filters, schedules and budgets are never sent. Enforced in `viewMatch` and covered by tests on the real route handlers.
 - The stage-2 chat is a short human say-hi chat: 280 characters per line and 40 lines per match. Why: §7.4 "short in-app say hi chat".
 
+## Negotiator
+- Agent A proposes first. Turns alternate for at most 4 rounds each, stopping at `accept` or `need_human`. Each agent sees only its own student's logistics plus the typed turns so far. Why: §6.3 and §7.5.
+- The 3 options come from code, not from a single LLM. Every proposal and counter is a candidate (the accepted one first), each is validated against both students' real free windows, budgets, diets and place hours, and any shortfall is filled deterministically from the overlapping windows and the best-ranked places. Why: no single agent ever sees both sides' raw data, and §7.5 says not to trust the LLM.
+- Dates last 60 minutes for availability checks, and the calendar invite blocks 90 minutes. Why: conservative availability, realistic invite.
+- The `.ics` uses UTC computed from America/Phoenix (UTC-7 all year), includes a 1-hour reminder, and folds lines at 75 octets. Why: Tempe has no DST, so the conversion is exact.
+- Negotiations are cached in `data/cache/negotiations/<matchId>.json`. A cached plan is re-dated to the coming week and has its picks reset when reused. Why: replay mode, and a cached date must never be in the past.
+- Negotiation messages go through the guard too (no speaker name/major, since names are unlocked at stage 3). Why: contact info and links still shouldn't be passed by agents.
+- `POST /negotiate` runs to completion and returns the plan. The planner page then reveals the turns one by one. Why: §11 allows "SSE or poll", and mock and live negotiations both take only a few seconds.
+
 ## UI
 - Design: ink-navy night background with amber/coral glow. Young Serif (display), Instrument Sans (body) and JetBrains Mono (chips/labels). Tokens are CSS variables with a light "warm paper" theme (system preference plus a toggle). Why: §10's "late-night campus" brief.
 - Agent A's bubbles are amber on the left and agent B's are coral on the right. Redactions render as a dashed red "hidden until a later level" span, and guard hits as solid red chips. Why: §10.4 asks that blocked items read at a glance.

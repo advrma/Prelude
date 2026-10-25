@@ -30,6 +30,9 @@ async function settle(page: Page, url: string) {
   if (url.includes("/predate/")) {
     // Wait for the stream to finish (verdict banner) so the shot shows the whole story.
     await page.waitForSelector("text=/It's a match|No match/", { timeout: 60_000 }).catch(() => {});
+  } else if (url.includes("/date")) {
+    // Wait for the negotiation to finish animating and the options (or the booked card) to show.
+    await page.waitForSelector("text=/Pick one|It's a date|Not unlocked/", { timeout: 60_000 }).catch(() => {});
   } else {
     await page.waitForLoadState("networkidle").catch(() => {});
   }
