@@ -1,0 +1,79 @@
+{
+  "matchId": "m_s05_s06",
+  "a": "s05",
+  "b": "s06",
+  "plan": {
+    "negotiation": [
+      {
+        "id": "m_s05_s06-n0",
+        "matchId": "m_s05_s06",
+        "from": "agent:s05",
+        "type": "propose",
+        "level": 3,
+        "content": "How about Thursday at 7pm, Thursday Open Mic at the MU? She's free then and loves open mic and music plans. Bonus: it's free.",
+        "data": {
+          "day": "Thu",
+          "start": "19:00",
+          "budgetBand": "under_15",
+          "place": "Thursday Open Mic at the MU",
+          "model": "mock"
+        },
+        "at": "2026-10-25T14:41:39.516Z"
+      },
+      {
+        "id": "m_s05_s06-n1",
+        "matchId": "m_s05_s06",
+        "from": "agent:s06",
+        "type": "accept",
+        "level": 3,
+        "content": "Thursday at 7pm, Thursday Open Mic at the MU works for her. Locking it in!",
+        "data": {
+          "day": "Thu",
+          "start": "19:00",
+          "budgetBand": "under_15",
+          "place": "Thursday Open Mic at the MU",
+          "model": "mock"
+        },
+        "at": "2026-10-25T14:41:39.517Z"
+      }
+    ],
+    "options": [
+      {
+        "day": "Thu",
+        "start": "19:00",
+        "place": "Thursday Open Mic at the MU",
+        "placeId": "mu-open-mic",
+        "area": "ASU Tempe campus",
+        "estCostPerPerson": "Free",
+        "why": "Your agents agreed on this one · both free Thursday at 7pm · fits under $15 · no food needed · open mic + music",
+        "date": "2026-10-29"
+      },
+      {
+        "day": "Fri",
+        "start": "18:00",
+        "place": "Memorial Union coffee bar",
+        "placeId": "mu-coffee",
+        "area": "ASU Tempe campus",
+        "estCostPerPerson": "$4–7",
+        "why": "Both free Friday at 6pm · fits under $15 · vegan + vegetarian friendly · coffee + low-key",
+        "date": "2026-10-30"
+      },
+      {
+        "day": "Sat",
+        "start": "12:00",
+        "place": "Mill Avenue Coffee House",
+        "placeId": "mill-coffee",
+        "area": "Mill Avenue",
+        "estCostPerPerson": "$5–9",
+        "why": "Both free Saturday at 12pm · fits under $15 · vegan + vegetarian friendly · coffee + low-key",
+        "date": "2026-10-31"
+      }
+    ],
+    "picks": {
+      "s05": null,
+      "s06": null
+    },
+    "outcome": "agreed",
+    "source": "mock"
+  }
+}

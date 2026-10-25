@@ -1,0 +1,95 @@
+{
+  "matchId": "m_s03_s04",
+  "a": "s03",
+  "b": "s04",
+  "plan": {
+    "negotiation": [
+      {
+        "id": "m_s03_s04-n0",
+        "matchId": "m_s03_s04",
+        "from": "agent:s03",
+        "type": "propose",
+        "level": 3,
+        "content": "How about Saturday at 8am, Sunrise Brunch Co.? She's free then and loves brunch and early plans. It's about $15–25 per person.",
+        "data": {
+          "day": "Sat",
+          "start": "08:00",
+          "budgetBand": "under_50",
+          "place": "Sunrise Brunch Co.",
+          "model": "mock"
+        },
+        "at": "2026-10-25T14:41:39.508Z"
+      },
+      {
+        "id": "m_s03_s04-n1",
+        "matchId": "m_s03_s04",
+        "from": "agent:s04",
+        "type": "counter",
+        "level": 3,
+        "content": "Love the idea, but he's keeping first dates under $10 right now. Could we keep Saturday at 8am and do Tempe Town Lake loop walk instead? It's free.",
+        "data": {
+          "day": "Sat",
+          "start": "08:00",
+          "budgetBand": "under_10",
+          "place": "Tempe Town Lake loop walk",
+          "model": "mock"
+        },
+        "at": "2026-10-25T14:41:39.509Z"
+      },
+      {
+        "id": "m_s03_s04-n2",
+        "matchId": "m_s03_s04",
+        "from": "agent:s03",
+        "type": "accept",
+        "level": 3,
+        "content": "Saturday at 8am, Tempe Town Lake loop walk works for her. Locking it in!",
+        "data": {
+          "day": "Sat",
+          "start": "08:00",
+          "budgetBand": "under_50",
+          "place": "Tempe Town Lake loop walk",
+          "model": "mock"
+        },
+        "at": "2026-10-25T14:41:39.509Z"
+      }
+    ],
+    "options": [
+      {
+        "day": "Sat",
+        "start": "08:00",
+        "place": "Tempe Town Lake loop walk",
+        "placeId": "town-lake-walk",
+        "area": "Tempe Beach Park",
+        "estCostPerPerson": "Free",
+        "why": "Your agents agreed on this one · both free Saturday at 8am · fits under $10 · no food needed · outdoors + active",
+        "date": "2026-10-31"
+      },
+      {
+        "day": "Sun",
+        "start": "08:00",
+        "place": "Hayden Butte (A Mountain) trail",
+        "placeId": "a-mountain",
+        "area": "Hayden Butte Preserve",
+        "estCostPerPerson": "Free",
+        "why": "Both free Sunday at 8am · fits under $10 · no food needed · outdoors + active",
+        "date": "2026-11-01"
+      },
+      {
+        "day": "Wed",
+        "start": "18:00",
+        "place": "Memorial Union coffee bar",
+        "placeId": "mu-coffee",
+        "area": "ASU Tempe campus",
+        "estCostPerPerson": "$4–7",
+        "why": "Both free Wednesday at 6pm · fits under $10 · no seafood friendly · coffee",
+        "date": "2026-10-28"
+      }
+    ],
+    "picks": {
+      "s03": null,
+      "s04": null
+    },
+    "outcome": "agreed",
+    "source": "mock"
+  }
+}

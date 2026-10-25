@@ -1,0 +1,79 @@
+{
+  "matchId": "m_s07_s09",
+  "a": "s07",
+  "b": "s09",
+  "plan": {
+    "negotiation": [
+      {
+        "id": "m_s07_s09-n0",
+        "matchId": "m_s07_s09",
+        "from": "agent:s07",
+        "type": "propose",
+        "level": 3,
+        "content": "How about Friday at 6pm, Brickyard Boba? He's free then and loves boba and games plans. It's about $5–8 per person.",
+        "data": {
+          "day": "Fri",
+          "start": "18:00",
+          "budgetBand": "under_15",
+          "place": "Brickyard Boba",
+          "model": "mock"
+        },
+        "at": "2026-10-25T14:41:39.515Z"
+      },
+      {
+        "id": "m_s07_s09-n1",
+        "matchId": "m_s07_s09",
+        "from": "agent:s09",
+        "type": "accept",
+        "level": 3,
+        "content": "Friday at 6pm, Brickyard Boba works for him. Locking it in!",
+        "data": {
+          "day": "Fri",
+          "start": "18:00",
+          "budgetBand": "under_30",
+          "place": "Brickyard Boba",
+          "model": "mock"
+        },
+        "at": "2026-10-25T14:41:39.515Z"
+      }
+    ],
+    "options": [
+      {
+        "day": "Fri",
+        "start": "18:00",
+        "place": "Brickyard Boba",
+        "placeId": "brickyard-boba",
+        "area": "Mill & University",
+        "estCostPerPerson": "$5–8",
+        "why": "Your agents agreed on this one · both free Friday at 6pm · fits under $15 · boba + games",
+        "date": "2026-10-30"
+      },
+      {
+        "day": "Sat",
+        "start": "14:00",
+        "place": "Lakeside Boba Bar",
+        "placeId": "lakeside-boba",
+        "area": "Tempe Town Lake north shore",
+        "estCostPerPerson": "$6–9",
+        "why": "Both free Saturday at 2pm · fits under $15 · boba + cozy",
+        "date": "2026-10-31"
+      },
+      {
+        "day": "Sun",
+        "start": "12:00",
+        "place": "Meeple & Mug Board Game Café",
+        "placeId": "meeple-mug",
+        "area": "Apache Boulevard",
+        "estCostPerPerson": "$10–15",
+        "why": "Both free Sunday at 12pm · fits under $15 · games + cozy",
+        "date": "2026-11-01"
+      }
+    ],
+    "picks": {
+      "s07": null,
+      "s09": null
+    },
+    "outcome": "agreed",
+    "source": "mock"
+  }
+}

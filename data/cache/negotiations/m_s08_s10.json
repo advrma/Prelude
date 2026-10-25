@@ -1,0 +1,79 @@
+{
+  "matchId": "m_s08_s10",
+  "a": "s08",
+  "b": "s10",
+  "plan": {
+    "negotiation": [
+      {
+        "id": "m_s08_s10-n0",
+        "matchId": "m_s08_s10",
+        "from": "agent:s08",
+        "type": "propose",
+        "level": 3,
+        "content": "How about Friday at 7pm, ASU Observatory open night? They're free then and loves astronomy and quiet plans. Bonus: it's free.",
+        "data": {
+          "day": "Fri",
+          "start": "19:00",
+          "budgetBand": "under_15",
+          "place": "ASU Observatory open night",
+          "model": "mock"
+        },
+        "at": "2026-10-25T14:41:39.513Z"
+      },
+      {
+        "id": "m_s08_s10-n1",
+        "matchId": "m_s08_s10",
+        "from": "agent:s10",
+        "type": "accept",
+        "level": 3,
+        "content": "Friday at 7pm, ASU Observatory open night works for her. Locking it in!",
+        "data": {
+          "day": "Fri",
+          "start": "19:00",
+          "budgetBand": "under_10",
+          "place": "ASU Observatory open night",
+          "model": "mock"
+        },
+        "at": "2026-10-25T14:41:39.514Z"
+      }
+    ],
+    "options": [
+      {
+        "day": "Fri",
+        "start": "19:00",
+        "place": "ASU Observatory open night",
+        "placeId": "asu-observatory",
+        "area": "ASU Tempe campus",
+        "estCostPerPerson": "Free",
+        "why": "Your agents agreed on this one · both free Friday at 7pm · fits under $10 · no food needed · astronomy + low-key",
+        "date": "2026-10-30"
+      },
+      {
+        "day": "Wed",
+        "start": "18:30",
+        "place": "Mill Avenue Coffee House",
+        "placeId": "mill-coffee",
+        "area": "Mill Avenue",
+        "estCostPerPerson": "$5–9",
+        "why": "Both free Wednesday at 6:30pm · fits under $10 · gluten-free + halal friendly · coffee + low-key",
+        "date": "2026-10-28"
+      },
+      {
+        "day": "Sun",
+        "start": "15:00",
+        "place": "Memorial Union coffee bar",
+        "placeId": "mu-coffee",
+        "area": "ASU Tempe campus",
+        "estCostPerPerson": "$4–7",
+        "why": "Both free Sunday at 3pm · fits under $10 · gluten-free + halal friendly · coffee + low-key",
+        "date": "2026-11-01"
+      }
+    ],
+    "picks": {
+      "s08": null,
+      "s10": null
+    },
+    "outcome": "agreed",
+    "source": "mock"
+  }
+}

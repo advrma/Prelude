@@ -1,0 +1,95 @@
+{
+  "matchId": "m_s01_s02",
+  "a": "s01",
+  "b": "s02",
+  "plan": {
+    "negotiation": [
+      {
+        "id": "m_s01_s02-n0",
+        "matchId": "m_s01_s02",
+        "from": "agent:s01",
+        "type": "propose",
+        "level": 3,
+        "content": "How about Thursday at 5pm, Tempe Town Lake loop walk? She's free then and loves low-key and outdoors plans. Bonus: it's free.",
+        "data": {
+          "day": "Thu",
+          "start": "17:00",
+          "budgetBand": "under_15",
+          "place": "Tempe Town Lake loop walk",
+          "model": "mock"
+        },
+        "at": "2026-10-25T14:41:39.512Z"
+      },
+      {
+        "id": "m_s01_s02-n1",
+        "matchId": "m_s01_s02",
+        "from": "agent:s02",
+        "type": "counter",
+        "level": 3,
+        "content": "Close! But Thursday he's in physics lab until 7pm. Could we push to 7:30pm instead? Same place.",
+        "data": {
+          "day": "Thu",
+          "start": "19:30",
+          "budgetBand": "under_30",
+          "place": "Tempe Town Lake loop walk",
+          "model": "mock"
+        },
+        "at": "2026-10-25T14:41:39.512Z"
+      },
+      {
+        "id": "m_s01_s02-n2",
+        "matchId": "m_s01_s02",
+        "from": "agent:s01",
+        "type": "accept",
+        "level": 3,
+        "content": "Thursday at 7:30pm, Tempe Town Lake loop walk works for her. Locking it in!",
+        "data": {
+          "day": "Thu",
+          "start": "19:30",
+          "budgetBand": "under_15",
+          "place": "Tempe Town Lake loop walk",
+          "model": "mock"
+        },
+        "at": "2026-10-25T14:41:39.512Z"
+      }
+    ],
+    "options": [
+      {
+        "day": "Thu",
+        "start": "19:30",
+        "place": "Tempe Town Lake loop walk",
+        "placeId": "town-lake-walk",
+        "area": "Tempe Beach Park",
+        "estCostPerPerson": "Free",
+        "why": "Your agents agreed on this one · both free Thursday at 7:30pm · fits under $15 · no food needed · outdoors + low-key",
+        "date": "2026-10-29"
+      },
+      {
+        "day": "Sat",
+        "start": "18:00",
+        "place": "Late-Night Taco Window",
+        "placeId": "apache-tacos",
+        "area": "Apache Boulevard",
+        "estCostPerPerson": "$6–10",
+        "why": "Both free Saturday at 6pm · fits under $15 · vegetarian friendly · tacos + late-night",
+        "date": "2026-10-31"
+      },
+      {
+        "day": "Sun",
+        "start": "13:00",
+        "place": "Hayden Butte (A Mountain) trail",
+        "placeId": "a-mountain",
+        "area": "Hayden Butte Preserve",
+        "estCostPerPerson": "Free",
+        "why": "Both free Sunday at 1pm · fits under $15 · no food needed · outdoors + adventurous",
+        "date": "2026-11-01"
+      }
+    ],
+    "picks": {
+      "s01": null,
+      "s02": null
+    },
+    "outcome": "agreed",
+    "source": "mock"
+  }
+}

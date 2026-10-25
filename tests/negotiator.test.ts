@@ -20,11 +20,11 @@ const NOW = new Date("2026-10-28T19:00:00Z");
 
 describe("option validation (code, not the LLM)", () => {
   it("accepts a slot that fits both schedules, both budgets and both diets", () => {
-    expect(validateOption({ day: "Thu", start: "19:30", place: "Tempe Town Lake sunset walk" }, maya, jordan)).toEqual([]);
+    expect(validateOption({ day: "Thu", start: "19:30", place: "Tempe Town Lake loop walk" }, maya, jordan)).toEqual([]);
   });
 
   it("drops a slot during Jordan's lab", () => {
-    expect(validateOption({ day: "Thu", start: "17:00", place: "Tempe Town Lake sunset walk" }, maya, jordan)).toContain("side B not free Thu 17:00");
+    expect(validateOption({ day: "Thu", start: "17:00", place: "Tempe Town Lake loop walk" }, maya, jordan)).toContain("side B not free Thu 17:00");
   });
 
   it("drops a place over the lower budget", () => {
@@ -41,7 +41,7 @@ describe("option validation (code, not the LLM)", () => {
     expect(validateOption({ day: "Thu", start: "22:30", place: "Mill Avenue Coffee House" }, maya, jordan)).toContain("place closed then");
     expect(validateOption({ day: "Thu", start: "20:00", place: "Food Truck Friday" }, maya, jordan)).toContain("place closed then");
     expect(validateOption({ day: "Thu", start: "20:00", place: "My dorm room" }, maya, jordan)).toContain("unknown place");
-    expect(validateOption({ day: "Someday", start: "8pm", place: "Tempe Town Lake sunset walk" }, maya, jordan)).toEqual(
+    expect(validateOption({ day: "Someday", start: "8pm", place: "Tempe Town Lake loop walk" }, maya, jordan)).toEqual(
       expect.arrayContaining(["bad day", "bad time"]),
     );
   });
@@ -49,7 +49,7 @@ describe("option validation (code, not the LLM)", () => {
   it("drops invalid LLM options and fills to exactly 3 valid ones deterministically", () => {
     const opts = buildOptions(
       [
-        { day: "Thu", start: "17:00", place: "Tempe Town Lake sunset walk" }, // lab conflict
+        { day: "Thu", start: "17:00", place: "Tempe Town Lake loop walk" }, // lab conflict
         { day: "Sat", start: "19:00", place: "Lakeview Bistro" }, // over Maya's budget
         { day: "Thu", start: "20:00", place: "Somebody's apartment" }, // not a public place
       ],
@@ -64,7 +64,7 @@ describe("option validation (code, not the LLM)", () => {
   });
 
   it("puts the agreed option first and labels it", () => {
-    const opts = buildOptions([{ day: "Thu", start: "19:30", place: "Tempe Town Lake sunset walk" }], maya, jordan, NOW);
+    const opts = buildOptions([{ day: "Thu", start: "19:30", place: "Tempe Town Lake loop walk" }], maya, jordan, NOW);
     expect(opts[0]).toMatchObject({ day: "Thu", start: "19:30", date: "2026-10-29" });
     expect(opts[0].why).toMatch(/agreed/);
   });
@@ -118,7 +118,7 @@ describe("picks", () => {
 });
 
 describe(".ics", () => {
-  const option = { day: "Thu", start: "19:30", place: "Tempe Town Lake sunset walk", area: "Tempe Beach Park", estCostPerPerson: "Free", why: "Both free, fits, cozy; nice", date: "2026-10-29" };
+  const option = { day: "Thu", start: "19:30", place: "Tempe Town Lake loop walk", area: "Tempe Beach Park", estCostPerPerson: "Free", why: "Both free, fits, cozy; nice", date: "2026-10-29" };
 
   it("converts Tempe time to UTC (UTC-7, no DST)", () => {
     expect(startUtc(option).toISOString()).toBe("2026-10-30T02:30:00.000Z");
@@ -132,7 +132,7 @@ describe(".ics", () => {
     expect(ics).toContain("SUMMARY:Prelude date ☕");
     expect(ics).toContain("DTSTART:20261030T023000Z");
     expect(ics).toContain("DTEND:20261030T040000Z");
-    expect(ics).toContain("LOCATION:Tempe Town Lake sunset walk\\, Tempe Beach Park\\, Tempe\\, AZ");
+    expect(ics).toContain("LOCATION:Tempe Town Lake loop walk\\, Tempe Beach Park\\, Tempe\\, AZ");
     expect(ics).toContain("UID:m1@prelude.local");
     for (const line of ics.split("\r\n")) expect(Buffer.byteLength(line, "utf8")).toBeLessThanOrEqual(75);
   });

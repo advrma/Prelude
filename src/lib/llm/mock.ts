@@ -332,7 +332,7 @@ export function mockNegotiateTurn(ctx: Extract<MockContext, { kind: "negotiate" 
     if (sameTime) {
       return {
         type: "counter",
-        content: `Love the idea, but ${reason}. Could we keep ${dayName(day)} at ${fmtTime(d.start)} and do ${sameTime.name} instead? ${sameTime.typicalCost} per person.`,
+        content: `Love the idea, but ${reason}. Could we keep ${dayName(day)} at ${fmtTime(d.start)} and do ${sameTime.name} instead? ${/^free$/i.test(sameTime.typicalCost) ? "It's free." : `About ${sameTime.typicalCost} per person.`}`,
         data: { day, start: d.start, place: sameTime.name, budgetBand: side.budgetBand },
       };
     }

@@ -83,6 +83,12 @@ One line each: decision, then why. These are calls made overnight when PLAN.md w
 - New students get `verifiedEdu: false` (domain check only), an ID derived from their email (re-onboarding updates rather than duplicates), and the shared generated "new" avatars.
 - Under-18 answers end the chat with a kind message (a code rule, no LLM call), and the save API rejects age < 18 again.
 
+## Scripts
+- `npm run check` makes one tiny structured-JSON call per model (`{"ok": true}`), so it verifies the key, the model ID and structured output in one request each. It prints the raw error plus a hint and exits 1 on failure. Verified overnight with a deliberately fake key: Google returned 400 API_KEY_INVALID, the hint was correct, and the fake calls were then deleted from `usage.json`.
+- `npm run night` resets the store, runs matching without the cache, runs every pre-date through the real router/limiter (RPM queueing, RPD stop) and negotiates a date for every match. It writes everything to `data/cache/` and prints per-pair lines plus a summary (pre-dates, matches, guard blocks, negotiations, requests per model, fallback turns). `npm run night:mock` runs the same pipeline with the mock provider and zero latency. Why: one command for the morning, and the same command regenerated tonight's replay cache.
+- The night run negotiates every match ahead of time, without changing reveal stages in the store. Why: §12 needs cached negotiations, and students should still click through the YES gates in the demo.
+- Renamed "Tempe Town Lake sunset walk" to "loop walk". Why: the negotiator legitimately proposed it at 8am.
+
 ## UI
 - Design: ink-navy night background with amber/coral glow. Young Serif (display), Instrument Sans (body) and JetBrains Mono (chips/labels). Tokens are CSS variables with a light "warm paper" theme (system preference plus a toggle). Why: §10's "late-night campus" brief.
 - Agent A's bubbles are amber on the left and agent B's are coral on the right. Redactions render as a dashed red "hidden until a later level" span, and guard hits as solid red chips. Why: §10.4 asks that blocked items read at a glance.

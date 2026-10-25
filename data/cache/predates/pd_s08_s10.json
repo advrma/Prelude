@@ -1,0 +1,151 @@
+{
+  "id": "pd_s08_s10",
+  "a": "s08",
+  "b": "s10",
+  "status": "done",
+  "transcript": [
+    {
+      "id": "pd_s08_s10-t0",
+      "predateId": "pd_s08_s10",
+      "from": "agent:s08",
+      "type": "chat",
+      "level": 0,
+      "content": "Hi! I'm here for my student. They light up talking about anime and board games, and lately it's been a lot of astronomy. What's your student into?",
+      "data": {
+        "model": "mock"
+      },
+      "at": "2026-10-25T14:41:39.421Z"
+    },
+    {
+      "id": "pd_s08_s10-t1",
+      "predateId": "pd_s08_s10",
+      "from": "agent:s10",
+      "type": "chat",
+      "level": 0,
+      "content": "Oh, she's going to be thrilled about the astronomy part. Mine is big on sci-fi books and bookstores, with a soft spot for open mics. What does a perfect weekend look like for yours?",
+      "data": {
+        "model": "mock"
+      },
+      "at": "2026-10-25T14:41:39.422Z"
+    },
+    {
+      "id": "pd_s08_s10-t2",
+      "predateId": "pd_s08_s10",
+      "from": "agent:s08",
+      "type": "chat",
+      "level": 0,
+      "content": "Wait, open mics too? They'd love that. Their perfect weekend: an astronomy club star party on Friday, a sci-fi book swap on Saturday, an open mic on Sunday night. Same question back, what's your student's ideal weekend?",
+      "data": {
+        "model": "mock"
+      },
+      "at": "2026-10-25T14:41:39.423Z"
+    },
+    {
+      "id": "pd_s08_s10-t3",
+      "predateId": "pd_s08_s10",
+      "from": "agent:s10",
+      "type": "chat",
+      "level": 0,
+      "content": "Being upfront: she's more of a cozy-night-in person. For her it's a bookstore café morning, calligraphy practice, and an observatory open night if the sky is clear. What does your student care about most in people?",
+      "data": {
+        "model": "mock"
+      },
+      "at": "2026-10-25T14:41:39.425Z"
+    },
+    {
+      "id": "pd_s08_s10-t4",
+      "predateId": "pd_s08_s10",
+      "from": "agent:s08",
+      "type": "chat",
+      "level": 0,
+      "content": "Honest note: they're a night owl, so sunrise plans would need a lot of coffee. They care a lot about authenticity and curiosity. Humor-wise? Sci-fi references and gentle sarcasm. What makes yours laugh?",
+      "data": {
+        "model": "mock"
+      },
+      "at": "2026-10-25T14:41:39.426Z"
+    },
+    {
+      "id": "pd_s08_s10-t5",
+      "predateId": "pd_s08_s10",
+      "from": "agent:s10",
+      "type": "chat",
+      "level": 0,
+      "content": "Oh, she's going to be thrilled about the curiosity part. Mine values curiosity and kindness above everything. Humor: soft-spoken, then suddenly devastatingly funny. Last one from me: early bird or night owl?",
+      "data": {
+        "model": "mock"
+      },
+      "at": "2026-10-25T14:41:39.428Z"
+    },
+    {
+      "id": "pd_s08_s10-t6",
+      "predateId": "pd_s08_s10",
+      "from": "agent:s08",
+      "type": "chat",
+      "level": 0,
+      "content": "Oh, they're going to be thrilled about the kindness part. They're a total night owl, and socially they're a good mix of nights out and nights in. Same for yours?",
+      "data": {
+        "model": "mock"
+      },
+      "at": "2026-10-25T14:41:39.429Z"
+    },
+    {
+      "id": "pd_s08_s10-t7",
+      "predateId": "pd_s08_s10",
+      "from": "agent:s10",
+      "type": "chat",
+      "level": 0,
+      "content": "Oh, that's a good answer. She's pretty flexible about mornings vs nights and happiest with a cozy night in. This was genuinely nice. I'll report back to her honestly.",
+      "data": {
+        "model": "mock"
+      },
+      "at": "2026-10-25T14:41:39.430Z"
+    }
+  ],
+  "verdicts": {
+    "s08": {
+      "studentId": "s08",
+      "score": 8,
+      "highlights": [
+        "You both light up about astronomy",
+        "Shared love of open mics",
+        "Boba came up on both sides"
+      ],
+      "flags": [
+        "They're 'friends first', you said 'see where it goes'",
+        "Different social energy: one of you is a homebody"
+      ],
+      "summaryForStudent": "I think you'd genuinely click: you share astronomy and open mics, and the conversation felt easy. There's one honest heads-up below, but I'd still say yes to the next step."
+    },
+    "s10": {
+      "studentId": "s10",
+      "score": 8,
+      "highlights": [
+        "You both light up about astronomy",
+        "Shared love of open mics",
+        "Boba came up on both sides"
+      ],
+      "flags": [
+        "They're 'see where it goes', you said 'friends first'",
+        "Different social energy: one of you is a homebody"
+      ],
+      "summaryForStudent": "I think you'd genuinely click: you share astronomy and open mics, and the conversation felt easy. There's one honest heads-up below, but I'd still say yes to the next step."
+    }
+  },
+  "matched": true,
+  "matcherScore": 0.6,
+  "sharedTags": [
+    "astronomy",
+    "open mics",
+    "boba",
+    "sci-fi books",
+    "authenticity",
+    "curiosity",
+    "kindness"
+  ],
+  "source": "mock",
+  "models": [
+    "mock"
+  ],
+  "startedAt": "2026-10-25T14:41:39.419Z",
+  "finishedAt": "2026-10-25T14:41:39.432Z"
+}

@@ -1,0 +1,149 @@
+{
+  "id": "pd_s03_s04",
+  "a": "s03",
+  "b": "s04",
+  "status": "done",
+  "transcript": [
+    {
+      "id": "pd_s03_s04-t0",
+      "predateId": "pd_s03_s04",
+      "from": "agent:s03",
+      "type": "chat",
+      "level": 0,
+      "content": "Hi! I'm here for my student. She lights up talking about gym and running, and lately it's been a lot of tempe town lake. What's your student into?",
+      "data": {
+        "model": "mock"
+      },
+      "at": "2026-10-25T14:41:39.392Z"
+    },
+    {
+      "id": "pd_s03_s04-t1",
+      "predateId": "pd_s03_s04",
+      "from": "agent:s04",
+      "type": "chat",
+      "level": 0,
+      "content": "Wait, gym too? He'd love that. Mine is big on running and basketball, with a soft spot for tempe town lake. What does a perfect weekend look like for yours?",
+      "data": {
+        "model": "mock"
+      },
+      "at": "2026-10-25T14:41:39.394Z"
+    },
+    {
+      "id": "pd_s03_s04-t2",
+      "predateId": "pd_s03_s04",
+      "from": "agent:s03",
+      "type": "chat",
+      "level": 0,
+      "content": "That sounds lovely. Her perfect weekend: a 6am gym session, a long run around Tempe Town Lake, a farmers market brunch, then a podcast and an early night. Same question back, what's your student's ideal weekend?",
+      "data": {
+        "model": "mock"
+      },
+      "at": "2026-10-25T14:41:39.395Z"
+    },
+    {
+      "id": "pd_s03_s04-t3",
+      "predateId": "pd_s03_s04",
+      "from": "agent:s04",
+      "type": "chat",
+      "level": 0,
+      "content": "Oh, that's a good answer. For him it's early pickup basketball, a sunrise run by the lake, then cooking a big Sunday dinner for his roommates. He lives in [hidden until a later level], so late-night food runs are basically a tradition. What does your student care about most in people?",
+      "blocked": {
+        "reason": "leak blocked: dorm"
+      },
+      "data": {
+        "model": "mock"
+      },
+      "at": "2026-10-25T14:41:39.397Z"
+    },
+    {
+      "id": "pd_s03_s04-t4",
+      "predateId": "pd_s03_s04",
+      "from": "agent:s03",
+      "type": "chat",
+      "level": 0,
+      "content": "Oh, she's going to be thrilled about the sunrise part. She cares a lot about discipline and family. Humor-wise? Quick and teasing. Will lovingly roast your playlist. What makes yours laugh?",
+      "data": {
+        "model": "mock"
+      },
+      "at": "2026-10-25T14:41:39.398Z"
+    },
+    {
+      "id": "pd_s03_s04-t5",
+      "predateId": "pd_s03_s04",
+      "from": "agent:s04",
+      "type": "chat",
+      "level": 0,
+      "content": "Oh, he's going to be thrilled about the discipline part. Mine values discipline and honesty above everything. Humor: deadpan. Saves his best material for the group chat. Last one from me: early bird or night owl?",
+      "data": {
+        "model": "mock"
+      },
+      "at": "2026-10-25T14:41:39.399Z"
+    },
+    {
+      "id": "pd_s03_s04-t6",
+      "predateId": "pd_s03_s04",
+      "from": "agent:s03",
+      "type": "chat",
+      "level": 0,
+      "content": "Honesty? That's very much her thing too. She's an early bird, and socially she's a good mix of nights out and nights in. Same for yours?",
+      "data": {
+        "model": "mock"
+      },
+      "at": "2026-10-25T14:41:39.400Z"
+    },
+    {
+      "id": "pd_s03_s04-t7",
+      "predateId": "pd_s03_s04",
+      "from": "agent:s04",
+      "type": "chat",
+      "level": 0,
+      "content": "Okay, I like the sound of that. He's an early bird and a good mix of nights out and nights in. This was genuinely nice. I'll report back to him honestly.",
+      "data": {
+        "model": "mock"
+      },
+      "at": "2026-10-25T14:41:39.401Z"
+    }
+  ],
+  "verdicts": {
+    "s03": {
+      "studentId": "s03",
+      "score": 9,
+      "highlights": [
+        "You both light up about gym",
+        "Shared love of running",
+        "Tempe town lake came up on both sides"
+      ],
+      "flags": [],
+      "summaryForStudent": "I think you'd genuinely click: you share gym and running, and the conversation felt easy. I'd say yes to the next step."
+    },
+    "s04": {
+      "studentId": "s04",
+      "score": 9,
+      "highlights": [
+        "You both light up about gym",
+        "Shared love of running",
+        "Tempe town lake came up on both sides"
+      ],
+      "flags": [],
+      "summaryForStudent": "I think you'd genuinely click: you share gym and running, and the conversation felt easy. I'd say yes to the next step."
+    }
+  },
+  "matched": true,
+  "matcherScore": 0.658,
+  "sharedTags": [
+    "gym",
+    "running",
+    "tempe town lake",
+    "podcasts",
+    "sunrise",
+    "discipline",
+    "family",
+    "honesty"
+  ],
+  "source": "mock",
+  "models": [
+    "mock"
+  ],
+  "startedAt": "2026-10-25T14:41:39.389Z",
+  "finishedAt": "2026-10-25T14:41:39.405Z"
+}

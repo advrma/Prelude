@@ -1,0 +1,147 @@
+{
+  "id": "pd_s02_s10",
+  "a": "s02",
+  "b": "s10",
+  "status": "done",
+  "transcript": [
+    {
+      "id": "pd_s02_s10-t0",
+      "predateId": "pd_s02_s10",
+      "from": "agent:s02",
+      "type": "chat",
+      "level": 0,
+      "content": "Hi! I'm here for my student. He lights up talking about astronomy and night hikes, and lately it's been a lot of late-night tacos. What's your student into?",
+      "data": {
+        "model": "mock"
+      },
+      "at": "2026-10-25T14:41:39.472Z"
+    },
+    {
+      "id": "pd_s02_s10-t1",
+      "predateId": "pd_s02_s10",
+      "from": "agent:s10",
+      "type": "chat",
+      "level": 0,
+      "content": "Oh, she's going to be thrilled about the astronomy part. Mine is big on sci-fi books and bookstores, with a soft spot for open mics. What does a perfect weekend look like for yours?",
+      "data": {
+        "model": "mock"
+      },
+      "at": "2026-10-25T14:41:39.473Z"
+    },
+    {
+      "id": "pd_s02_s10-t2",
+      "predateId": "pd_s02_s10",
+      "from": "agent:s02",
+      "type": "chat",
+      "level": 0,
+      "content": "Ha, love that. His perfect weekend: biking the loop around Tempe Town Lake, developing film in a friend's darkroom, then late-night tacos on Apache. Same question back, what's your student's ideal weekend?",
+      "data": {
+        "model": "mock"
+      },
+      "at": "2026-10-25T14:41:39.474Z"
+    },
+    {
+      "id": "pd_s02_s10-t3",
+      "predateId": "pd_s02_s10",
+      "from": "agent:s10",
+      "type": "chat",
+      "level": 0,
+      "content": "Okay, I like the sound of that. For her it's a bookstore café morning, calligraphy practice, and an observatory open night if the sky is clear. You can find her on insta at [hidden until a later level], honestly her stories say it all. What does your student care about most in people?",
+      "blocked": {
+        "reason": "leak blocked: social handle"
+      },
+      "data": {
+        "model": "mock"
+      },
+      "at": "2026-10-25T14:41:39.475Z"
+    },
+    {
+      "id": "pd_s02_s10-t4",
+      "predateId": "pd_s02_s10",
+      "from": "agent:s02",
+      "type": "chat",
+      "level": 0,
+      "content": "Honest note: he's a night owl, so sunrise plans would need a lot of coffee. He cares a lot about curiosity and honesty. Humor-wise? Goofy. Quotes old sitcoms and laughs at his own jokes first. What makes yours laugh?",
+      "data": {
+        "model": "mock"
+      },
+      "at": "2026-10-25T14:41:39.476Z"
+    },
+    {
+      "id": "pd_s02_s10-t5",
+      "predateId": "pd_s02_s10",
+      "from": "agent:s10",
+      "type": "chat",
+      "level": 0,
+      "content": "Curiosity? That's very much her thing too. Mine values curiosity and kindness above everything. Humor: soft-spoken, then suddenly devastatingly funny. Last one from me: early bird or night owl?",
+      "data": {
+        "model": "mock"
+      },
+      "at": "2026-10-25T14:41:39.477Z"
+    },
+    {
+      "id": "pd_s02_s10-t6",
+      "predateId": "pd_s02_s10",
+      "from": "agent:s02",
+      "type": "chat",
+      "level": 0,
+      "content": "Ha, love that. He's a total night owl, and socially he's a good mix of nights out and nights in. Same for yours?",
+      "data": {
+        "model": "mock"
+      },
+      "at": "2026-10-25T14:41:39.478Z"
+    },
+    {
+      "id": "pd_s02_s10-t7",
+      "predateId": "pd_s02_s10",
+      "from": "agent:s10",
+      "type": "chat",
+      "level": 0,
+      "content": "Ha, love that. She's pretty flexible about mornings vs nights and happiest with a cozy night in. This was genuinely nice. I'll report back to her honestly.",
+      "data": {
+        "model": "mock"
+      },
+      "at": "2026-10-25T14:41:39.479Z"
+    }
+  ],
+  "verdicts": {
+    "s02": {
+      "studentId": "s02",
+      "score": 4,
+      "highlights": [
+        "You both light up about astronomy",
+        "Shared love of curiosity"
+      ],
+      "flags": [
+        "They're 'friends first', you said 'see where it goes'",
+        "Different social energy: one of you is a homebody"
+      ],
+      "summaryForStudent": "It was a friendly chat, but I didn't feel a real spark for you, even with astronomy and curiosity in common. I'd pass on this one, and nobody will ever know."
+    },
+    "s10": {
+      "studentId": "s10",
+      "score": 4,
+      "highlights": [
+        "You both light up about astronomy",
+        "Shared love of curiosity"
+      ],
+      "flags": [
+        "They're 'see where it goes', you said 'friends first'",
+        "Different social energy: one of you is a homebody"
+      ],
+      "summaryForStudent": "It was a friendly chat, but I didn't feel a real spark for you, even with astronomy and curiosity in common. I'd pass on this one, and nobody will ever know."
+    }
+  },
+  "matched": false,
+  "matcherScore": 0.198,
+  "sharedTags": [
+    "astronomy",
+    "curiosity"
+  ],
+  "source": "mock",
+  "models": [
+    "mock"
+  ],
+  "startedAt": "2026-10-25T14:41:39.471Z",
+  "finishedAt": "2026-10-25T14:41:39.480Z"
+}
