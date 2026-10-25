@@ -47,5 +47,15 @@ One line each: decision, then why. These are calls made overnight when PLAN.md w
 - Added a few extra injection patterns (disregard/forget the rules, developer mode, "pretend you have no rules") and name patterns ("goes by X", "she's called X"). Why: cheap and obviously in the spirit of §7.3.
 - Normalized curly apostrophes before matching. Why: LLMs often emit ’.
 
+## Pre-dates
+- The rolling summary is deterministic (the first sentence of each older turn), not an LLM call. Why: §7.2 keeps tokens small, and an extra summarization call per turn would roughly double free-tier usage.
+- Each agent's context goes in one user message: summary + last 3 messages from that agent's point of view. The other side's text is exactly what the guard let through. Why: simple, provider-agnostic, and it guarantees the wrapped injection is what the agent sees.
+- Intent goes to the verdict agent as a "hub note" (the other student's stated intent). It's never shown to the other agent during the pre-date. Why: §6.2's example flag ("they're 'see where it goes', you said 'serious'") needs it, and Filters must stay out of the conversation.
+- Pre-date IDs are deterministic (`pd_<a>_<b>`, sorted), and matches are `m_<a>_<b>`. Why: cached pre-dates are then found again for the same pair after a reset.
+- "Run tonight's matching" reuses a finished pre-date from `data/cache/predates/` when one exists (marked `source: "replay"`) and queues the rest for a background run. "Run again live" on the watch screen (`?fresh=1`) re-runs one on demand. Why: the demo works instantly and doesn't burn quota, and live runs remain one click away.
+- The SSE stream replays finished pre-dates with pacing (`REPLAY_DELAY_MS`, default 900 ms) and "typing…" events. Queued or running ones are followed live through an in-process event bus. Why: both paths look and behave the same in the UI.
+- With `?as=<studentId>`, the pre-date API and stream return only that student's verdict and show the other side as "Their agent". Without it, they return the judge/hub view with both verdicts. Why: verdicts are private (§1), and the demo still needs a god view for judges.
+- Process-wide singletons (store, limiter, router, run registry, event bus) live on `globalThis`. Why: Next dev bundles each route separately and hot-reloads modules, and they must share one state.
+
 ## Places
 - Places carry a `foodOk` list, a `servesFood` flag, opening hours and optional `days`. Why: the negotiator must validate diet, budget and time in code (§7.5).

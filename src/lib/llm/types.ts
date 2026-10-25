@@ -17,6 +17,7 @@ export type MockContext =
       totalTurns: number;
       me: Vibe;
       lastOther?: string; // what the other agent said (after the guard)
+      history?: string[]; // every earlier message, as this agent saw it (oldest first, excluding lastOther)
     }
   | {
       kind: "verdict";

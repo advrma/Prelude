@@ -2,6 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { config } from "./config";
 import { loadPersonas } from "./data";
+import { runMatching } from "./hub/pool";
 import type { HubLogEntry, Match, PairResult, PreDate, Report, Student } from "./types";
 
 // Local JSON store (§5.3): data/store.json with an in-process write queue.
@@ -33,6 +34,10 @@ interface StoreGlobals {
 // Survives Next dev hot reloads, so every route handler shares one state + one queue.
 const g = globalThis as unknown as { __preludeStore?: StoreGlobals };
 const store: StoreGlobals = (g.__preludeStore ??= { queue: Promise.resolve() });
+// Read-only deploys start with matching already run from the committed replay cache.
+store.hydrator ??= (state) => {
+  runMatching(state, { useCache: true });
+};
 
 export function storePath(): string {
   return path.join(config.stateDir(), "store.json");
