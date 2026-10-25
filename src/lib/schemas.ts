@@ -5,10 +5,10 @@ import { BUDGET_BANDS, GENDERS, INTENTS, WEEKDAYS } from "./types";
 
 const hhmm = z.string().regex(/^([01]\d|2[0-3]):[0-5]\d$/, "time must be HH:MM");
 
-export const GenderSchema = z.enum(GENDERS as [string, ...string[]]);
-export const IntentSchema = z.enum(INTENTS as [string, ...string[]]);
-export const BudgetSchema = z.enum(BUDGET_BANDS as [string, ...string[]]);
-export const WeekdaySchema = z.enum(WEEKDAYS as [string, ...string[]]);
+export const GenderSchema = z.enum(GENDERS);
+export const IntentSchema = z.enum(INTENTS);
+export const BudgetSchema = z.enum(BUDGET_BANDS);
+export const WeekdaySchema = z.enum(WEEKDAYS);
 
 export const TimeWindowSchema = z.object({ day: WeekdaySchema, start: hhmm, end: hhmm });
 

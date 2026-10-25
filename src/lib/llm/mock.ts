@@ -377,14 +377,14 @@ export function mockNegotiateTurn(ctx: Extract<MockContext, { kind: "negotiate" 
 // ---------- onboarding ----------
 
 export const ONBOARDING_QUESTIONS = [
-  "Hi! I'm your Prelude agent. Everything you tell me stays with me unless you say yes later. First: what should I call you, and can you confirm you're 18 or older? (Your age is fine too.)",
-  "How do you describe your gender? You can pick one or self-describe. I never guess this.",
-  "Who would you like to meet? Women, men, nonbinary people, everyone, or a mix?",
+  "Hi! I'm your Prelude agent. What you tell me stays with me unless you say yes later. First: what should I call you, and how old are you? (Prelude is 18+.)",
+  "How do you describe your gender? Woman, man, nonbinary, self-describe, or prefer not to say. I never guess this.",
+  "Who would you like to meet? Women, men, nonbinary people, everyone, or a mix.",
+  "Which pronouns should I use when I talk about you to other agents?",
   "What are you looking for right now: something serious, casual, see where it goes, or friends first?",
-  "Tell me what you love doing. A few interests is perfect (e.g. night hikes, board games, open mics).",
-  "Describe your perfect weekend. And are you more of an early bird or a night owl?",
-  "Any dealbreakers? (e.g. smoking). And which pronouns should I use when I talk about you?",
-  "Last one, for planning only: rough first-date budget (under $10/$15/$30/$50), any food needs, and your major + year (revealed only at Level 1).",
+  "Tell me what you love doing. A few interests, separated by commas (e.g. night hikes, board games, open mics).",
+  "Describe your perfect weekend. Are you more of an early bird, a night owl, or flexible?",
+  "Last one, for planning only: any dealbreakers, a first-date budget (under $10/$15/$30/$50), food needs, and your major + year (revealed only at Level 1).",
 ];
 
 // ---------- entry point ----------

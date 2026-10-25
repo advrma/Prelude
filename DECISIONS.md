@@ -74,6 +74,15 @@ One line each: decision, then why. These are calls made overnight when PLAN.md w
 - Negotiation messages go through the guard too (no speaker name/major, since names are unlocked at stage 3). Why: contact info and links still shouldn't be passed by agents.
 - `POST /negotiate` runs to completion and returns the plan. The planner page then reveals the turns one by one. Why: §11 allows "SSE or poll", and mock and live negotiations both take only a few seconds.
 
+## Onboarding
+- 8 fixed topics in a fixed order: name+age, gender, who to meet, pronouns, intent, interests, weekend+rhythm, logistics (dealbreakers, budget, food, major/year). Code decides which question comes next; the LLM only phrases it. Why: §6.4 requires always asking gender and who they want to meet, in ≤8 questions.
+- Gender, who they want to meet, pronouns and age are parsed in code from the student's own answers and override any LLM extraction. Unclear answers become "prefer not to say", "everyone" and they/them, never a guess. Why: §6.4/§15 "asked, never inferred".
+- Quick-reply chips for the identity questions (including "Self-describe…" and "Prefer not to say") make answers explicit and unambiguous.
+- Mock finalize builds the profile from explicit answers plus fixed sample defaults for values, humor and bio. Why: §6.4 says mock produces a fixed sample profile, but identity fields must come from the student.
+- Onboarding doesn't ask for a schedule (it would push past 8 questions). New students get default free windows (Thu–Sun evenings), shown as "edit later" in the preview. Why: the question budget.
+- New students get `verifiedEdu: false` (domain check only), an ID derived from their email (re-onboarding updates rather than duplicates), and the shared generated "new" avatars.
+- Under-18 answers end the chat with a kind message (a code rule, no LLM call), and the save API rejects age < 18 again.
+
 ## UI
 - Design: ink-navy night background with amber/coral glow. Young Serif (display), Instrument Sans (body) and JetBrains Mono (chips/labels). Tokens are CSS variables with a light "warm paper" theme (system preference plus a toggle). Why: §10's "late-night campus" brief.
 - Agent A's bubbles are amber on the left and agent B's are coral on the right. Redactions render as a dashed red "hidden until a later level" span, and guard hits as solid red chips. Why: §10.4 asks that blocked items read at a glance.
