@@ -1,0 +1,29 @@
+# deps
+node_modules/
+
+# next
+.next/
+out/
+build/
+next-env.d.ts
+*.tsbuildinfo
+
+# secrets — only .env.example is committed
+.env
+.env.local
+.env.*.local
+.env.development
+.env.production
+
+# runtime state (created on first run)
+data/store.json
+data/store.json.tmp
+data/usage.json
+data/usage.json.tmp
+
+# misc
+.DS_Store
+Thumbs.db
+npm-debug.log*
+.vercel
+coverage/

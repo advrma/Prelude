@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+/* "Late-night campus": ink-navy night, warm amber + coral glow. Light mode = warm paper at dusk. */
+:root {
+  --bg: #0a0f1f;
+  --bg-2: #0e1530;
+  --surface: #131c3a;
+  --surface-2: #1a2548;
+  --line: #27335e;
+  --text: #f1ebe0;
+  --muted: #9aa3c2;
+  --amber: #ffb547;
+  --coral: #ff6b5b;
+  --mint: #5ee2b0;
+  --danger: #ff4d6d;
+  --glow: rgba(255, 158, 87, 0.35);
+  --shadow: 0 10px 40px rgba(0, 0, 0, 0.45);
+  color-scheme: dark;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --bg: #fbf5ec;
+    --bg-2: #f4ead9;
+    --surface: #fffaf2;
+    --surface-2: #f6ecdc;
+    --line: #e4d4bc;
+    --text: #1b1a2e;
+    --muted: #6b6680;
+    --amber: #b86e00;
+    --coral: #d6453a;
+    --mint: #0f8a5f;
+    --danger: #c81e45;
+    --glow: rgba(214, 69, 58, 0.18);
+    --shadow: 0 10px 30px rgba(80, 50, 20, 0.12);
+    color-scheme: light;
+  }
+}
+
+:root[data-theme="light"] {
+  --bg: #fbf5ec;
+  --bg-2: #f4ead9;
+  --surface: #fffaf2;
+  --surface-2: #f6ecdc;
+  --line: #e4d4bc;
+  --text: #1b1a2e;
+  --muted: #6b6680;
+  --amber: #b86e00;
+  --coral: #d6453a;
+  --mint: #0f8a5f;
+  --danger: #c81e45;
+  --glow: rgba(214, 69, 58, 0.18);
+  --shadow: 0 10px 30px rgba(80, 50, 20, 0.12);
+  color-scheme: light;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-bg-2: var(--bg-2);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-line: var(--line);
+  --color-text: var(--text);
+  --color-muted: var(--muted);
+  --color-amber: var(--amber);
+  --color-coral: var(--coral);
+  --color-mint: var(--mint);
+  --color-danger: var(--danger);
+  --font-display: "Young Serif", Georgia, "Times New Roman", serif;
+  --font-sans: "Instrument Sans", ui-sans-serif, system-ui, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "Cascadia Code", Consolas, monospace;
+}
+
+html {
+  background: var(--bg);
+}
+
+body {
+  background:
+    radial-gradient(1200px 600px at 85% -10%, var(--glow), transparent 60%),
+    radial-gradient(900px 500px at -10% 110%, rgba(94, 120, 255, 0.12), transparent 60%),
+    var(--bg);
+  background-attachment: fixed;
+  color: var(--text);
+  font-family: var(--font-sans);
+  min-height: 100dvh;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--coral);
+  color: #fff;
+}
