@@ -6,7 +6,7 @@ Updated at every milestone commit.
 - [x] 2. Types + store + personas + places: `npm run seed`, `npm run reset`
 - [x] 3. Matcher + tests
 - [x] 4. LLM layer: mock, cache, limiter, router, Gemini provider + tests
-- [ ] 5. Guards + tests
+- [x] 5. Guards + tests
 - [ ] 6. Pre-date runner + verdicts + SSE route
 - [ ] 7. Watch the date screen
 - [ ] 8. Reveal state machine + matches inbox + tests

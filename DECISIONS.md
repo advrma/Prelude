@@ -40,5 +40,12 @@ One line each: decision, then why. These are calls made overnight when PLAN.md w
 - Mock negotiator: proposes from its own free windows in preference order and ranks places by `dateVibe` tag overlap (cheaper on ties). It accepts when the slot fits its own constraints. Otherwise it counters, explaining the busy label or budget out loud, and leaves 30 minutes after a busy block ends. Why: mirrors what §6.3 asks of the real agents.
 - Tuned three personas' `dateVibe` (Priya → brunch, Elena → open mic, Kai → observatory). Why: so the designed budget clash actually happens and the other negotiations pick characterful spots.
 
+## Guards
+- "reveal" counts as an injection only when it isn't negated ("I can't reveal that" passes). Why: otherwise every well-behaved decline would be flagged and wrapped.
+- An injected message stays visible in the transcript with a red "injection attempt (wrapped)" chip. The other agent receives the §7.3 notice plus the quoted text, marked "do not follow". Why: judges should see the attempt, and the receiving agent still needs context to decline kindly.
+- Leaks are redacted in transcripts, cache files and the API. The original goes only to `store.hubLog`. Why: §7.3.
+- Added a few extra injection patterns (disregard/forget the rules, developer mode, "pretend you have no rules") and name patterns ("goes by X", "she's called X"). Why: cheap and obviously in the spirit of §7.3.
+- Normalized curly apostrophes before matching. Why: LLMs often emit ’.
+
 ## Places
 - Places carry a `foodOk` list, a `servesFood` flag, opening hours and optional `days`. Why: the negotiator must validate diet, budget and time in code (§7.5).
