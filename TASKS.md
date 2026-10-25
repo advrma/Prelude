@@ -8,7 +8,7 @@ Updated at every milestone commit.
 - [x] 4. LLM layer: mock, cache, limiter, router, Gemini provider + tests
 - [x] 5. Guards + tests
 - [x] 6. Pre-date runner + verdicts + SSE route
-- [ ] 7. Watch the date screen
+- [x] 7. Watch the date screen
 - [ ] 8. Reveal state machine + matches inbox + tests
 - [ ] 9. Negotiator + date planner + .ics + tests
 - [ ] 10. Landing + hub view + persona switcher + usage badge

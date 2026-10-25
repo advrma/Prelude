@@ -57,5 +57,11 @@ One line each: decision, then why. These are calls made overnight when PLAN.md w
 - With `?as=<studentId>`, the pre-date API and stream return only that student's verdict and show the other side as "Their agent". Without it, they return the judge/hub view with both verdicts. Why: verdicts are private (§1), and the demo still needs a god view for judges.
 - Process-wide singletons (store, limiter, router, run registry, event bus) live on `globalThis`. Why: Next dev bundles each route separately and hot-reloads modules, and they must share one state.
 
+## UI
+- Design: ink-navy night background with amber/coral glow. Young Serif (display), Instrument Sans (body) and JetBrains Mono (chips/labels). Tokens are CSS variables with a light "warm paper" theme (system preference plus a toggle). Why: §10's "late-night campus" brief.
+- Agent A's bubbles are amber on the left and agent B's are coral on the right. Redactions render as a dashed red "hidden until a later level" span, and guard hits as solid red chips. Why: §10.4 asks that blocked items read at a glance.
+- The watch page works in two views. Without `?as=` it's a judge view showing both names and both verdicts. With `?as=<id>` (linked from a student's inbox), the other side is "Their agent" and their verdict panel says it stays private. Why: verdicts are private to each student (§1, §6.2).
+- Added `scripts/screenshots.ts` (`npm run shots`) driving the locally installed Edge/Chrome through `playwright-core` (no browser download). It flags horizontal overflow and console errors at 375px and 1280px. Why: this is how the §12 mobile check was verified overnight.
+
 ## Places
 - Places carry a `foodOk` list, a `servesFood` flag, opening hours and optional `days`. Why: the negotiator must validate diet, budget and time in code (§7.5).

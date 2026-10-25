@@ -21,6 +21,9 @@ data/store.json.tmp
 data/usage.json
 data/usage.json.tmp
 
+# screenshots from npm run shots
+screenshots/
+
 # misc
 .DS_Store
 Thumbs.db
