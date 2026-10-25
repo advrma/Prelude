@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 300" width="240" height="300" role="img" aria-label="Locked photo">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1a2548"/><stop offset="1" stop-color="#0e1530"/></linearGradient></defs>
+<rect width="240" height="300" fill="url(#g)"/>
+<g fill="none" stroke="#ffb547" stroke-width="6" stroke-linecap="round" opacity="0.8">
+<rect x="90" y="140" width="60" height="48" rx="8"/><path d="M102 140 v-14 a18 18 0 0 1 36 0 v14"/>
+</g>
+</svg>

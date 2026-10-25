@@ -15,3 +15,15 @@ One line each: decision, then why. These are calls made overnight when PLAN.md w
 - Config reads env lazily (functions, not constants) and strips inline `# comments`. Why: tests flip env at runtime, and `.env.example` puts comments on the same line as values.
 - `PRELUDE_STATE_DIR` overrides where `store.json`, `usage.json` and `cache/` live. Tests point it at a temp dir. Why: tests must never touch the real store or replay cache.
 - `MOCK_LATENCY_MS` and `REPLAY_DELAY_MS` env overrides (both 0 in tests and cache generation). Why: §8.5 latency would make tests slow.
+
+## Data model
+- Added `vibe.pronouns`, one of she/her, he/him or they/them, stated by the student. Why: §6.1 has agents talk about their student in the third person ("She's big on night hikes"), and pronouns must be stated, never inferred from gender or name.
+- Added `private.busy`, labelled busy blocks like "physics lab". Only the student's own negotiator sees them. Why: §6.3 wants conflicts explained out loud ("lab until then"), and free windows alone carry no reason.
+- `freeBusy` uses weekdays (Mon–Sun) plus `HH:MM` in America/Phoenix, listed in preference order. Weekdays resolve to real dates in the next 7 days when a date is planned. Why: §9 says "next 7 days relative to today", and static JSON with fixed dates would go stale.
+- `AgentMessage.blocked.original` is optional. Originals are stored only in `store.hubLog` and never in transcripts, cache files or API output. Why: §7.3 says "keep the original only in the hub log".
+- Added `matcherScore`, `sharedTags`, `source` (live/mock/replay) and `models` to `PreDate`. Why: the §10.4 header shows matcher score, shared tags, model used and live/replay.
+- Added `chat` to `Match`, plus `placeId`/`date` on `DateOption` and `outcome`/`source` on `DatePlan`. Why: stage-2 "say hi" chat, ICS dates and the "need_human" path need somewhere to live.
+- Persona emails use `@example.edu`. Why: a reserved example domain can't collide with real students' addresses.
+- Static seed data (`personas.json`, `places.json`) is imported as JSON, not read from disk. Why: it then ships inside the serverless bundle for replay deploys.
+- Avatars are generated abstract SVG silhouettes (`npm run avatars`) and committed under `public/avatars/`. Why: §9 says no real people or photos.
+- Places carry a `foodOk` list, a `servesFood` flag, opening hours and optional `days`. Why: the negotiator must validate diet, budget and time in code (§7.5).

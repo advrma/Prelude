@@ -1,0 +1,452 @@
+[
+  {
+    "id": "s01",
+    "email": "maya.demo@example.edu",
+    "verifiedEdu": true,
+    "filters": {
+      "gender": "woman",
+      "wantsToMeet": ["man"],
+      "age": 21,
+      "ageMin": 20,
+      "ageMax": 25,
+      "intent": "serious",
+      "dealbreakers": ["different campus"],
+      "campus": "ASU Tempe"
+    },
+    "vibe": {
+      "pronouns": "she/her",
+      "interests": ["astronomy", "night hikes", "a mountain", "late-night tacos", "thrifting", "indie music", "film photography"],
+      "values": ["honesty", "curiosity", "kindness"],
+      "humor": "Dry and a little nerdy. Planet puns are fair game.",
+      "perfectWeekend": "Thrifting vintage jackets in the afternoon, then a night hike up A Mountain to watch the city lights and look for Jupiter.",
+      "socialEnergy": "balanced",
+      "chronotype": "night-owl",
+      "bio": "Happiest outside after dark with a thermos of chai. Collects vintage jackets and bad star puns. Looking for someone curious who actually texts back."
+    },
+    "private": {
+      "firstName": "Maya",
+      "major": "Astrophysics",
+      "year": "Junior",
+      "photos": ["/avatars/s01-1.svg", "/avatars/s01-2.svg"],
+      "contact": "demo-only (contact unlocks after the date)",
+      "freeBusy": [
+        { "day": "Thu", "start": "17:00", "end": "23:00" },
+        { "day": "Sat", "start": "16:00", "end": "23:59" },
+        { "day": "Fri", "start": "18:00", "end": "23:00" },
+        { "day": "Tue", "start": "19:00", "end": "22:30" },
+        { "day": "Sun", "start": "13:00", "end": "20:00" }
+      ],
+      "busy": [
+        { "day": "Mon", "start": "09:00", "end": "18:00", "label": "classes + TA office hours" },
+        { "day": "Tue", "start": "10:00", "end": "18:30", "label": "classes" },
+        { "day": "Wed", "start": "09:00", "end": "22:00", "label": "classes + observatory shift" }
+      ],
+      "budgetBand": "under_15",
+      "food": ["vegetarian"],
+      "dateVibe": ["low-key", "outdoors", "coffee", "astronomy"]
+    }
+  },
+  {
+    "id": "s02",
+    "email": "jordan.demo@example.edu",
+    "verifiedEdu": true,
+    "filters": {
+      "gender": "man",
+      "wantsToMeet": ["woman"],
+      "age": 22,
+      "ageMin": 19,
+      "ageMax": 24,
+      "intent": "see-where-it-goes",
+      "dealbreakers": [],
+      "campus": "ASU Tempe"
+    },
+    "vibe": {
+      "pronouns": "he/him",
+      "interests": ["astronomy", "night hikes", "late-night tacos", "film photography", "indie music", "board games", "cycling"],
+      "values": ["curiosity", "honesty", "humor"],
+      "humor": "Goofy. Quotes old sitcoms and laughs at his own jokes first.",
+      "perfectWeekend": "Biking the loop around Tempe Town Lake, developing film in a friend's darkroom, then late-night tacos on Apache.",
+      "socialEnergy": "balanced",
+      "chronotype": "night-owl",
+      "bio": "Shoots film, mostly sunsets and friends mid-laugh. A social smoker who's trying to quit. Would rather explore somewhere new than plan every detail."
+    },
+    "private": {
+      "firstName": "Jordan",
+      "major": "Physics",
+      "year": "Senior",
+      "photos": ["/avatars/s02-1.svg", "/avatars/s02-2.svg"],
+      "contact": "demo-only (contact unlocks after the date)",
+      "freeBusy": [
+        { "day": "Sat", "start": "15:00", "end": "23:59" },
+        { "day": "Thu", "start": "19:00", "end": "23:30" },
+        { "day": "Sun", "start": "10:00", "end": "14:00" },
+        { "day": "Wed", "start": "20:00", "end": "23:00" }
+      ],
+      "busy": [
+        { "day": "Thu", "start": "16:00", "end": "19:00", "label": "physics lab" },
+        { "day": "Mon", "start": "08:00", "end": "20:00", "label": "classes + bike shop shift" },
+        { "day": "Fri", "start": "12:00", "end": "23:00", "label": "bike shop shift" }
+      ],
+      "budgetBand": "under_30",
+      "food": [],
+      "dateVibe": ["adventurous", "outdoors", "late-night", "tacos"]
+    }
+  },
+  {
+    "id": "s03",
+    "email": "priya.demo@example.edu",
+    "verifiedEdu": true,
+    "filters": {
+      "gender": "woman",
+      "wantsToMeet": ["man"],
+      "age": 20,
+      "ageMin": 20,
+      "ageMax": 24,
+      "intent": "serious",
+      "dealbreakers": ["smoking"],
+      "campus": "ASU Tempe"
+    },
+    "vibe": {
+      "pronouns": "she/her",
+      "interests": ["gym", "running", "tempe town lake", "meal prep", "podcasts", "hiking", "sunrise"],
+      "values": ["discipline", "family", "kindness", "honesty"],
+      "humor": "Quick and teasing. Will lovingly roast your playlist.",
+      "perfectWeekend": "A 6am gym session, a long run around Tempe Town Lake, a farmers market brunch, then a podcast and an early night.",
+      "socialEnergy": "balanced",
+      "chronotype": "early-bird",
+      "bio": "Up before the sun and weirdly proud of it. Big on routines, bigger on loyalty. Wants something real with someone who has their own goals."
+    },
+    "private": {
+      "firstName": "Priya",
+      "major": "Biomedical Sciences",
+      "year": "Sophomore",
+      "photos": ["/avatars/s03-1.svg", "/avatars/s03-2.svg"],
+      "contact": "demo-only (contact unlocks after the date)",
+      "freeBusy": [
+        { "day": "Sat", "start": "08:00", "end": "13:00" },
+        { "day": "Sun", "start": "07:00", "end": "12:00" },
+        { "day": "Wed", "start": "17:00", "end": "20:00" },
+        { "day": "Fri", "start": "16:00", "end": "19:00" }
+      ],
+      "busy": [
+        { "day": "Mon", "start": "08:00", "end": "17:00", "label": "classes" },
+        { "day": "Tue", "start": "08:00", "end": "21:00", "label": "classes + hospital volunteering" },
+        { "day": "Thu", "start": "08:00", "end": "21:00", "label": "classes + study group" }
+      ],
+      "budgetBand": "under_50",
+      "food": ["no seafood"],
+      "dateVibe": ["brunch", "active", "outdoors"]
+    }
+  },
+  {
+    "id": "s04",
+    "email": "marcus.demo@example.edu",
+    "verifiedEdu": true,
+    "filters": {
+      "gender": "man",
+      "wantsToMeet": ["woman"],
+      "age": 23,
+      "ageMin": 20,
+      "ageMax": 25,
+      "intent": "serious",
+      "dealbreakers": [],
+      "campus": "ASU Tempe"
+    },
+    "vibe": {
+      "pronouns": "he/him",
+      "interests": ["gym", "running", "basketball", "tempe town lake", "cooking", "podcasts", "sunrise"],
+      "values": ["discipline", "honesty", "family", "ambition"],
+      "humor": "Deadpan. Saves his best material for the group chat.",
+      "perfectWeekend": "Early pickup basketball, a sunrise run by the lake, then cooking a big Sunday dinner for his roommates.",
+      "socialEnergy": "balanced",
+      "chronotype": "early-bird",
+      "bio": "Works two jobs and still makes the 6am gym. Cooks a mean jollof rice. Looking for a partner in crime who likes mornings as much as he does."
+    },
+    "private": {
+      "firstName": "Marcus",
+      "major": "Mechanical Engineering",
+      "year": "Senior",
+      "photos": ["/avatars/s04-1.svg", "/avatars/s04-2.svg"],
+      "contact": "demo-only (contact unlocks after the date)",
+      "freeBusy": [
+        { "day": "Sat", "start": "07:00", "end": "11:00" },
+        { "day": "Sun", "start": "08:00", "end": "12:00" },
+        { "day": "Wed", "start": "18:00", "end": "21:00" }
+      ],
+      "busy": [
+        { "day": "Sat", "start": "12:00", "end": "20:00", "label": "work shift" },
+        { "day": "Fri", "start": "15:00", "end": "23:00", "label": "work shift" },
+        { "day": "Tue", "start": "08:00", "end": "20:00", "label": "classes + capstone lab" }
+      ],
+      "budgetBand": "under_10",
+      "food": [],
+      "dateVibe": ["active", "outdoors", "coffee"]
+    }
+  },
+  {
+    "id": "s05",
+    "email": "elena.demo@example.edu",
+    "verifiedEdu": true,
+    "filters": {
+      "gender": "woman",
+      "wantsToMeet": ["woman"],
+      "age": 22,
+      "ageMin": 20,
+      "ageMax": 26,
+      "intent": "casual",
+      "dealbreakers": [],
+      "campus": "ASU Tempe"
+    },
+    "vibe": {
+      "pronouns": "she/her",
+      "interests": ["open mics", "poetry", "thrifting", "coffee shops", "vinyl", "ceramics", "indie music"],
+      "values": ["creativity", "authenticity", "kindness"],
+      "humor": "Absurdist. Narrates her own life like a nature documentary.",
+      "perfectWeekend": "Digging through vinyl bins, reading a poem at an open mic, then a coffee shop until close arguing about lyrics.",
+      "socialEnergy": "balanced",
+      "chronotype": "night-owl",
+      "bio": "Writes poems on receipts and sometimes reads them out loud. Has strong opinions about oat milk. Here for chemistry and very long conversations."
+    },
+    "private": {
+      "firstName": "Elena",
+      "major": "English Literature",
+      "year": "Senior",
+      "photos": ["/avatars/s05-1.svg", "/avatars/s05-2.svg"],
+      "contact": "demo-only (contact unlocks after the date)",
+      "freeBusy": [
+        { "day": "Thu", "start": "19:00", "end": "23:00" },
+        { "day": "Fri", "start": "17:00", "end": "23:00" },
+        { "day": "Sat", "start": "12:00", "end": "18:00" },
+        { "day": "Tue", "start": "18:00", "end": "21:00" }
+      ],
+      "busy": [
+        { "day": "Mon", "start": "10:00", "end": "19:00", "label": "classes + bookstore shift" },
+        { "day": "Wed", "start": "10:00", "end": "21:00", "label": "classes + writing workshop" }
+      ],
+      "budgetBand": "under_15",
+      "food": ["vegan"],
+      "dateVibe": ["coffee", "open mic", "low-key"]
+    }
+  },
+  {
+    "id": "s06",
+    "email": "sofia.demo@example.edu",
+    "verifiedEdu": true,
+    "filters": {
+      "gender": "woman",
+      "wantsToMeet": ["woman", "man"],
+      "age": 21,
+      "ageMin": 19,
+      "ageMax": 25,
+      "intent": "casual",
+      "dealbreakers": [],
+      "campus": "ASU Tempe"
+    },
+    "vibe": {
+      "pronouns": "she/her",
+      "interests": ["open mics", "board games", "anime", "thrifting", "boba", "ceramics", "indie music"],
+      "values": ["creativity", "kindness", "humor"],
+      "humor": "Chaotic good. Makes a pun, then explains it.",
+      "perfectWeekend": "A board game café with friends, a boba run, then an evening at the ceramics studio throwing lopsided mugs.",
+      "socialEnergy": "balanced",
+      "chronotype": "flexible",
+      "bio": "Makes wonky mugs and gives them away as gifts. Will absolutely beat you at Catan. Looking for someone who says yes to spontaneous plans."
+    },
+    "private": {
+      "firstName": "Sofia",
+      "major": "Biochemistry",
+      "year": "Junior",
+      "photos": ["/avatars/s06-1.svg", "/avatars/s06-2.svg"],
+      "contact": "demo-only (contact unlocks after the date)",
+      "freeBusy": [
+        { "day": "Thu", "start": "19:00", "end": "23:00" },
+        { "day": "Fri", "start": "18:00", "end": "23:59" },
+        { "day": "Sat", "start": "11:00", "end": "16:00" }
+      ],
+      "busy": [
+        { "day": "Thu", "start": "16:00", "end": "19:00", "label": "organic chem lab" },
+        { "day": "Sat", "start": "16:30", "end": "22:00", "label": "ceramics studio shift" },
+        { "day": "Mon", "start": "09:00", "end": "17:00", "label": "classes" }
+      ],
+      "budgetBand": "under_15",
+      "food": ["vegetarian"],
+      "dateVibe": ["boba", "games", "low-key"]
+    }
+  },
+  {
+    "id": "s07",
+    "email": "theo.demo@example.edu",
+    "verifiedEdu": true,
+    "filters": {
+      "gender": "man",
+      "wantsToMeet": ["man"],
+      "age": 21,
+      "ageMin": 19,
+      "ageMax": 25,
+      "intent": "friends-first",
+      "dealbreakers": [],
+      "campus": "ASU Tempe"
+    },
+    "vibe": {
+      "pronouns": "he/him",
+      "interests": ["anime", "board games", "cooking", "gaming", "k-pop dance", "boba", "manga"],
+      "values": ["loyalty", "kindness", "curiosity"],
+      "humor": "Wholesome and meme-fluent. Laughs way too loud in quiet places.",
+      "perfectWeekend": "An anime marathon with homemade ramen, a board game café night, and a k-pop dance practice that's mostly laughing.",
+      "socialEnergy": "homebody",
+      "chronotype": "night-owl",
+      "bio": "Cooks for everyone on his floor. Keeps a ranked list of every boba spot near campus. Wants to start as friends and see if there's a spark."
+    },
+    "private": {
+      "firstName": "Theo",
+      "major": "Computer Science",
+      "year": "Junior",
+      "photos": ["/avatars/s07-1.svg", "/avatars/s07-2.svg"],
+      "contact": "demo-only (contact unlocks after the date)",
+      "freeBusy": [
+        { "day": "Fri", "start": "18:00", "end": "23:59" },
+        { "day": "Sat", "start": "14:00", "end": "23:59" },
+        { "day": "Sun", "start": "12:00", "end": "20:00" }
+      ],
+      "busy": [
+        { "day": "Thu", "start": "17:00", "end": "22:00", "label": "dining hall shift" },
+        { "day": "Tue", "start": "09:00", "end": "18:00", "label": "classes" }
+      ],
+      "budgetBand": "under_15",
+      "food": [],
+      "dateVibe": ["boba", "games", "cozy"]
+    }
+  },
+  {
+    "id": "s08",
+    "email": "kai.demo@example.edu",
+    "verifiedEdu": true,
+    "filters": {
+      "gender": "nonbinary",
+      "wantsToMeet": "everyone",
+      "age": 20,
+      "ageMin": 19,
+      "ageMax": 24,
+      "intent": "see-where-it-goes",
+      "dealbreakers": [],
+      "campus": "ASU Tempe"
+    },
+    "vibe": {
+      "pronouns": "they/them",
+      "interests": ["anime", "board games", "astronomy", "open mics", "boba", "sci-fi books", "synthwave"],
+      "values": ["authenticity", "curiosity", "kindness"],
+      "humor": "Sci-fi references and gentle sarcasm.",
+      "perfectWeekend": "An astronomy club star party on Friday, a sci-fi book swap on Saturday, an open mic on Sunday night.",
+      "socialEnergy": "balanced",
+      "chronotype": "night-owl",
+      "bio": "Plays synth in a band that has never finished a song. Reads three books at once. Looking for someone curious about the universe and the people in it."
+    },
+    "private": {
+      "firstName": "Kai",
+      "major": "Digital Culture",
+      "year": "Sophomore",
+      "photos": ["/avatars/s08-1.svg", "/avatars/s08-2.svg"],
+      "contact": "demo-only (contact unlocks after the date)",
+      "freeBusy": [
+        { "day": "Fri", "start": "19:00", "end": "23:59" },
+        { "day": "Wed", "start": "18:00", "end": "22:00" },
+        { "day": "Sun", "start": "15:00", "end": "22:00" }
+      ],
+      "busy": [
+        { "day": "Sat", "start": "10:00", "end": "22:00", "label": "band practice + library shift" },
+        { "day": "Mon", "start": "09:00", "end": "16:00", "label": "classes" }
+      ],
+      "budgetBand": "under_15",
+      "food": ["gluten-free"],
+      "dateVibe": ["astronomy", "books", "low-key"]
+    }
+  },
+  {
+    "id": "s09",
+    "email": "rafael.demo@example.edu",
+    "verifiedEdu": true,
+    "filters": {
+      "gender": "man",
+      "wantsToMeet": ["man"],
+      "age": 23,
+      "ageMin": 20,
+      "ageMax": 27,
+      "intent": "serious",
+      "dealbreakers": [],
+      "campus": "ASU Tempe"
+    },
+    "vibe": {
+      "pronouns": "he/him",
+      "interests": ["cooking", "anime", "salsa dancing", "board games", "food trucks", "gaming", "boba"],
+      "values": ["loyalty", "kindness", "family"],
+      "humor": "Big laugh, bigger stories, terrible dad jokes.",
+      "perfectWeekend": "Salsa night, Food Truck Friday at Tempe Beach Park, then Sunday cooking his abuela's recipes with friends.",
+      "socialEnergy": "balanced",
+      "chronotype": "flexible",
+      "bio": "Cooks like he's feeding a family of twelve. Teaches beginner salsa once a week. Looking for someone warm who's ready for something real."
+    },
+    "private": {
+      "firstName": "Rafael",
+      "major": "Hospitality Management",
+      "year": "Senior",
+      "photos": ["/avatars/s09-1.svg", "/avatars/s09-2.svg"],
+      "contact": "demo-only (contact unlocks after the date)",
+      "freeBusy": [
+        { "day": "Fri", "start": "17:00", "end": "23:00" },
+        { "day": "Sat", "start": "12:00", "end": "22:00" },
+        { "day": "Sun", "start": "11:00", "end": "18:00" }
+      ],
+      "busy": [
+        { "day": "Thu", "start": "18:00", "end": "21:00", "label": "teaching salsa class" },
+        { "day": "Wed", "start": "11:00", "end": "22:00", "label": "restaurant shift" }
+      ],
+      "budgetBand": "under_30",
+      "food": [],
+      "dateVibe": ["food trucks", "dancing", "dinner"]
+    }
+  },
+  {
+    "id": "s10",
+    "email": "noor.demo@example.edu",
+    "verifiedEdu": true,
+    "filters": {
+      "gender": "woman",
+      "wantsToMeet": ["man", "nonbinary"],
+      "age": 19,
+      "ageMin": 19,
+      "ageMax": 22,
+      "intent": "friends-first",
+      "dealbreakers": [],
+      "campus": "ASU Tempe"
+    },
+    "vibe": {
+      "pronouns": "she/her",
+      "interests": ["astronomy", "sci-fi books", "bookstores", "open mics", "boba", "calligraphy", "indie games"],
+      "values": ["curiosity", "kindness", "authenticity"],
+      "humor": "Soft-spoken, then suddenly devastatingly funny.",
+      "perfectWeekend": "A bookstore café morning, calligraphy practice, and an observatory open night if the sky is clear.",
+      "socialEnergy": "homebody",
+      "chronotype": "flexible",
+      "bio": "Annotates her books in three colors. Will lend you a book and quiz you on it. Looking for slow conversations that turn into long ones."
+    },
+    "private": {
+      "firstName": "Noor",
+      "major": "Linguistics",
+      "year": "Freshman",
+      "photos": ["/avatars/s10-1.svg", "/avatars/s10-2.svg"],
+      "contact": "demo-only (contact unlocks after the date)",
+      "freeBusy": [
+        { "day": "Fri", "start": "19:00", "end": "22:30" },
+        { "day": "Sun", "start": "10:00", "end": "16:00" },
+        { "day": "Wed", "start": "18:30", "end": "21:00" }
+      ],
+      "busy": [
+        { "day": "Sat", "start": "09:00", "end": "18:00", "label": "family visit" },
+        { "day": "Thu", "start": "09:00", "end": "20:00", "label": "classes + tutoring" }
+      ],
+      "budgetBand": "under_10",
+      "food": ["halal"],
+      "dateVibe": ["books", "coffee", "quiet"]
+    }
+  }
+]

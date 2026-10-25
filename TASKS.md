@@ -1,9 +1,9 @@
-﻿# Overnight build progress (Â§13)
+﻿# Overnight build progress (§13)
 
 Updated at every milestone commit.
 
 - [x] 1. Scaffold: Next.js + TS + Tailwind + Vitest + Zod, layout, `.env.example`, `.gitignore`, health route
-- [ ] 2. Types + store + personas + places: `npm run seed`, `npm run reset`
+- [x] 2. Types + store + personas + places: `npm run seed`, `npm run reset`
 - [ ] 3. Matcher + tests
 - [ ] 4. LLM layer: mock, cache, limiter, router, Gemini provider + tests
 - [ ] 5. Guards + tests
@@ -15,4 +15,4 @@ Updated at every milestone commit.
 - [ ] 11. Onboarding chat
 - [ ] 12. Scripts: `check`, `night`, mock replay cache
 - [ ] 13. Polish: design, mobile, empty/error/loading states, README with Mermaid diagram
-- [ ] 14. Final self-review, Â§12 ticked, MORNING.md, final commit
+- [ ] 14. Final self-review, §12 ticked, MORNING.md, final commit
