@@ -1,4 +1,5 @@
-// npm run e2e -- [--base http://localhost:3000] [--out screenshots/e2e] [--width 375]
+// npm run e2e -- [--base http://localhost:3000] [--out screenshots/e2e] [--width 375] [--headed --slow]
+// --headed --slow turns it into a visible auto-play walkthrough you can screen-record for the demo video.
 // Clicks through the full §12 demo path in a real browser (local Edge/Chrome via playwright-core):
 // reset → run matching → watch a pre-date (guard chip + verdicts) → YES through levels 1–3 as Maya and
 // Jordan → negotiation → 3 options → both pick → .ics download. Needs the app running (npm run dev / start).
@@ -13,10 +14,13 @@ function arg(name: string, fallback: string): string {
 const base = arg("base", "http://localhost:3000");
 const out = path.resolve(arg("out", "screenshots/e2e"));
 const width = Number(arg("width", "375"));
+const headed = process.argv.includes("--headed");
+const slow = process.argv.includes("--slow");
 
 let n = 0;
 async function shot(page: Page, name: string) {
   n++;
+  if (slow) await page.waitForTimeout(1800); // linger on each key screen for the video
   await page.screenshot({ path: path.join(out, `${String(n).padStart(2, "0")}-${name}.png`), fullPage: true });
 }
 
@@ -36,7 +40,7 @@ async function main() {
   let browser;
   for (const channel of ["msedge", "chrome"]) {
     try {
-      browser = await chromium.launch({ channel, headless: true });
+      browser = await chromium.launch({ channel, headless: !headed, slowMo: slow ? 450 : 0 });
       break;
     } catch {
       /* next */

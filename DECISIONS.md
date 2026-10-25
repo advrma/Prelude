@@ -100,5 +100,12 @@ One line each: decision, then why. These are calls made overnight when PLAN.md w
 - Added `GET /api/hub` and `GET /api/students` (not in §11). Why: the hub view and the persona switcher need them, and neither exposes private fields.
 - Added `scripts/screenshots.ts` (`npm run shots`) driving the locally installed Edge/Chrome through `playwright-core` (no browser download). It flags horizontal overflow and console errors at 375px and 1280px. Why: this is how the §12 mobile check was verified overnight.
 
+## Final review
+- Added `npm run e2e` (`scripts/demo-e2e.ts`), which clicks the full §12 demo path in a real browser and asserts each step. It passed at 375px and 1280px against `next start`. Why: "full demo path works" should be checked, not assumed.
+- That run found a real UX gap: after the other student picked a date option, you only saw a small chip. The planner now says "Jordan picked option 1. Pick the same one and it's booked" with an **Accept their pick** button.
+- Verified "fresh clone, no .env" by cloning into a temp folder: `npm install`, `npm test`, `npm run lint`, `npm run build`, then `npm run dev` and a smoke test of every page and the SSE stream.
+- Relaxed the verdict and negotiation Zod limits slightly (up to 6 highlights, 4 flags, longer text; code still trims to 3/2). Why: a chatty real model shouldn't fall back to mock over an extra highlight.
+- Stretch: only the cheap one. `npm run e2e -- --headed --slow` doubles as a recordable auto-play walkthrough for the video. The Discord bot and Google Calendar were skipped. Why: §13 says stretch only if everything is green, and both need sign-ups or keys we don't have.
+
 ## Places
 - Places carry a `foodOk` list, a `servesFood` flag, opening hours and optional `days`. Why: the negotiator must validate diet, budget and time in code (§7.5).

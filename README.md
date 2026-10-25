@@ -165,6 +165,7 @@ flowchart LR
 | `npm run check` | Verify the key and both model IDs |
 | `npm run night` | Real pre-dates + negotiations for the whole pool → `data/cache/` |
 | `npm run night:mock` | Same with the mock provider (how the committed cache was made) |
+| `npm run e2e` | Clicks the full demo path in a real browser (needs the app running). `-- --headed --slow` makes a visible auto-play walkthrough for recording the video |
 | `npm run shots` | Screenshots of every screen at 375px and 1280px using your installed Edge/Chrome; flags horizontal overflow |
 | `npm run avatars` | Regenerate the abstract SVG avatars |
 

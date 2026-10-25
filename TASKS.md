@@ -15,4 +15,4 @@ Updated at every milestone commit.
 - [x] 11. Onboarding chat
 - [x] 12. Scripts: `check`, `night`, mock replay cache
 - [x] 13. Polish: design, mobile, empty/error/loading states, README with Mermaid diagram
-- [ ] 14. Final self-review, §12 ticked, MORNING.md, final commit
+- [x] 14. Final self-review, §12 ticked, MORNING.md, final commit

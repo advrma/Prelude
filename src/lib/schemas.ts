@@ -51,19 +51,22 @@ export const StudentSchema = z.object({
   }),
 });
 
-/** What the verdict LLM returns (studentId is added by code). */
+/**
+ * What the verdict LLM returns (studentId is added by code). Limits are a little looser than the
+ * prompt asks (2–3 highlights, 0–2 flags) so a chatty model doesn't trigger a fallback; code trims.
+ */
 export const VerdictOutputSchema = z.object({
   score: z.number().min(0).max(10),
-  highlights: z.array(z.string().min(1).max(200)).min(1).max(3),
-  flags: z.array(z.string().min(1).max(200)).max(2),
-  summaryForStudent: z.string().min(1).max(500),
+  highlights: z.array(z.string().min(1).max(300)).min(1).max(6),
+  flags: z.array(z.string().min(1).max(300)).max(4),
+  summaryForStudent: z.string().min(1).max(800),
 });
 export type VerdictOutput = z.infer<typeof VerdictOutputSchema>;
 
 /** One negotiator turn (§6.3). */
 export const NegotiateTurnSchema = z.object({
   type: z.enum(["propose", "counter", "accept", "need_human"]),
-  content: z.string().min(1).max(500),
+  content: z.string().min(1).max(800),
   data: z
     .object({
       day: WeekdaySchema.optional(),
